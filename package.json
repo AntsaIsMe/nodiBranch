@@ -1,12 +1,12 @@
 {
-  "name": "knife",
+  "name": "nodibranch",
   "version": "1.0.0",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bin": {
-    "knife": "./bin/cli.mjs"
+    "nodibranch": "./bin/cli.mjs"
   },
   "dependencies": {
     "cli-progress": "^3.12.0",
