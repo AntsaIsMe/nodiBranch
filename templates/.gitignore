@@ -1,0 +1,8 @@
+# Dépendances (Le dossier qui contient tous les packages installés)
+node_modules/
+
+# Fichiers de logs (générés en cas d'erreur)
+npm-debug.log*
+
+# Fichiers d'environnement (Pour masquer tes clés secrètes / API)
+.env
