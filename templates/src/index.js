@@ -4,6 +4,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import fs from 'fs'
 import { fileURLToPath } from 'url';
+import path from 'path';
 
 // Chargement des variables d'environnement
 dotenv.config();

@@ -1,13 +1,8 @@
 #!/usr/bin/env node
 
-import inquirer from 'inquirer';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { questions } from '../src/questions/envQuest.js';
-import { modifFile } from '../src/utils/files.js';
-import toString from '../src/utils/toString.js';
-import fs from 'fs-extra';
-import depInstall from '../src/utils/depInstall.js';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,65 +13,34 @@ const packageJsonPath = path.join(userPath, 'package.json');
 
 const args = process.argv.slice(2)
 const command = args[0]
+const name = args[1]
 
 async function run() {
   switch (command) {
     case "init":
-          try {
-            const answers = await inquirer.prompt(questions);
-            
-            
-        
-        
-            // met les valeurs par defaut dans env si !dbcustom
-            if (!answers.personalisable?.includes('dbcustom')) {
-              questions
-                .filter(q => q.when && 'default' in q)
-                .forEach(q => { answers[q.name] = q.default; });
-            }
-        
-            const uploadChecked = answers.personalisable?.includes('upload');
-            
-        
-            const { personalisable, ...envAnswers } = answers;
-            const envContent = toString(envAnswers);
-        
-            const cible = path.join(__dirname, '..', 'templates', '.env');
-            await modifFile(cible, envContent);
-        
-            // copy templates
-            await fs.copy(source, userPath);
-        
-            if (!uploadChecked) {
-              const unusedMiddleware = path.join(userPath, 'src', 'middlewares', 'upload.js');
-              await fs.remove(unusedMiddleware);
-            } else {
-              // add upload dir
-              await fs.ensureDir(path.join(userPath, 'uploads'));
-        
-              const packageJson = await fs.readJson(packageJsonPath);
-        
-              packageJson.dependencies = packageJson.dependencies || {};
-              packageJson.dependencies['multer'] = '^1.4.5-lts.1';
-        
-              await fs.writeJson(packageJsonPath, packageJson, { spaces: 2 });
-            }
-        
-            await depInstall(userPath);
-        
-          } catch (error) {
-            if (error.isTtyError) {
-              console.log("Problème d'affichage du terminal.");
-            } else {
-              console.log("Une erreur est survenue :", error);      
-            }
-          }
-      break;
+    case "-i":
+      {
+        const {initProj} = await import('../src/commands/init.js')
+        await initProj()
+        break;
+      }
+    
+    case '-r':
+      const {makeRoute} = await import('../src/commands/makeRoute.js')
+      makeRoute(name)
+      break
   
+    case "help":
+    case "-h":
+    case "--help":
+    case undefined: {
+      const {help} = await import('../src/commands/help.js')
+      help();
+      break;
+    }
 
     default:
-          console.log("hello world");
-          
+          console.log(`nb ${command} doesn't exist, type nb -h to see help`);
       break;
   }
 }
