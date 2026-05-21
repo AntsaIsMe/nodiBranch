@@ -1,12 +1,13 @@
 {
   "name": "nodibranch",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bin": {
-    "nodibranch": "./bin/cli.mjs"
+    "nodibranch": "./bin/cli.mjs",
+    "nb": "./bin/cli.mjs"
   },
   "dependencies": {
     "cli-progress": "^3.12.0",

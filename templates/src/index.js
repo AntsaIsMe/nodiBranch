@@ -2,7 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import morgan from 'morgan';
-import pool from './config/db.js';
+import fs from 'fs'
+import { fileURLToPath } from 'url';
 
 // Chargement des variables d'environnement
 dotenv.config();
@@ -20,6 +21,19 @@ app.get('/', (req, res) => {
   res.json({ message: "Votre backend Node.js + MySQL est sécurisé et opérationnel !" });
 });
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const routesDir = path.join(__dirname, 'routes');
+
+if (fs.existsSync(routesDir)) {
+  fs.readdirSync(routesDir).forEach(async (file) => {
+    if (file.endsWith('Routes.js')) {
+        const route = await import(`./routes/${file}`)
+        const routeName = file.replace('Routes.js', '').toLocaleLowerCase()
+
+        app.use(`/api/${routeName}`, route.default)
+    }
+  })
+}
 
 // Démarrage du serveur
 app.listen(PORT, () => {

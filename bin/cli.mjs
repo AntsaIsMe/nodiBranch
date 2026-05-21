@@ -16,44 +16,68 @@ const source = path.join(__dirname, '..', 'templates');
 const userPath = process.cwd();
 const packageJsonPath = path.join(userPath, 'package.json');
 
+const args = process.argv.slice(2)
+const command = args[0]
+
 async function run() {
-  try {
-    const answers = await inquirer.prompt(questions);
-    
-    const uploadChecked = answers.personalisable?.includes('upload');
+  switch (command) {
+    case "init":
+          try {
+            const answers = await inquirer.prompt(questions);
+            
+            
+        
+        
+            // met les valeurs par defaut dans env si !dbcustom
+            if (!answers.personalisable?.includes('dbcustom')) {
+              questions
+                .filter(q => q.when && 'default' in q)
+                .forEach(q => { answers[q.name] = q.default; });
+            }
+        
+            const uploadChecked = answers.personalisable?.includes('upload');
+            
+        
+            const { personalisable, ...envAnswers } = answers;
+            const envContent = toString(envAnswers);
+        
+            const cible = path.join(__dirname, '..', 'templates', '.env');
+            await modifFile(cible, envContent);
+        
+            // copy templates
+            await fs.copy(source, userPath);
+        
+            if (!uploadChecked) {
+              const unusedMiddleware = path.join(userPath, 'src', 'middlewares', 'upload.js');
+              await fs.remove(unusedMiddleware);
+            } else {
+              // add upload dir
+              await fs.ensureDir(path.join(userPath, 'uploads'));
+        
+              const packageJson = await fs.readJson(packageJsonPath);
+        
+              packageJson.dependencies = packageJson.dependencies || {};
+              packageJson.dependencies['multer'] = '^1.4.5-lts.1';
+        
+              await fs.writeJson(packageJsonPath, packageJson, { spaces: 2 });
+            }
+        
+            await depInstall(userPath);
+        
+          } catch (error) {
+            if (error.isTtyError) {
+              console.log("Problème d'affichage du terminal.");
+            } else {
+              console.log("Une erreur est survenue :", error);      
+            }
+          }
+      break;
+  
 
-    const { personalisable, ...envAnswers } = answers;
-    const envContent = toString(envAnswers);
-
-    const cible = path.join(__dirname, '..', 'templates', '.env');
-    await modifFile(cible, envContent);
-
-    // copy templates
-    await fs.copy(source, userPath);
-
-    if (!uploadChecked) {
-      const unusedMiddleware = path.join(userPath, 'src', 'middlewares', 'upload.js');
-      await fs.remove(unusedMiddleware);
-    } else {
-      // add upload dir
-      await fs.ensureDir(path.join(userPath, 'uploads'));
-
-      const packageJson = await fs.readJson(packageJsonPath);
-
-      packageJson.dependencies = packageJson.dependencies || {};
-      packageJson.dependencies['multer'] = '^1.4.5-lts.1';
-
-      await fs.writeJson(packageJsonPath, packageJson, { spaces: 2 });
-    }
-
-    await depInstall(userPath);
-
-  } catch (error) {
-    if (error.isTtyError) {
-      console.log("Problème d'affichage du terminal.");
-    } else {
-      console.log("Une erreur est survenue :", error);      
-    }
+    default:
+          console.log("hello world");
+          
+      break;
   }
 }
 
