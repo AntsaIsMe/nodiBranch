@@ -66,6 +66,7 @@ export const questions = [
       new inquirer.Separator(' '),
       { name: 'Personnaliser le DB host, le port, user, password', value: 'dbcustom'},
       { name: 'Integrer l\'upload fichier (Multer)', value: 'upload' },
+      { name: 'Generer une template de route avec crud', value: 'crud' },
       new inquirer.Separator(' '),
     ]
   }, 
@@ -98,5 +99,12 @@ export const questions = [
     mask: '*',
     default: '',
     when: (answers) => answers.personalisable?.includes('dbcustom')
+  },
+  {
+    type: 'input',
+    name: 'ROUTE',
+    message: 'Entrez le nom de la route ?',
+    default: '',
+    when: (answers) => answers.personalisable?.includes('crud')
   },
 ];

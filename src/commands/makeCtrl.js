@@ -15,10 +15,14 @@ const controller = {
     update: updateTemplate(),
     delete: deleteTemplate()
 };
+const pathNow = process.cwd();
+const ctrlDir = path.join(pathNow, 'src', 'controllers');
+const ctrlFile = path.join(ctrlDir, `${routeN}Controller.js`);
 
-export async function makeCtrl(route) {
+export async function makeCtrl(route, paramType = null, paramContent = null) {
     if (!route) {
-        console.log(chalk.red("Veuillez entrer un nom"));   
+        console.log(chalk.red("Veuillez entrer un nom"));  
+        return 
     }
     const routeN = route.toLowerCase()
 
@@ -28,12 +32,41 @@ export async function makeCtrl(route) {
     const ctrlFile = path.join(ctrlDir, `${routeN}Controller.js`)
 
 
-    const allContrContent = (
-        Object.values(controller)
-        .join('\n\n')
-    );
+    let allContrContent
+
+    if (paramType != null) {
+        switch (paramType) {
+            case "except":
+                allContrContent = Object.entries(controller)
+                    .filter(([key]) => !paramContent.includes(key))
+                    .map(([, value]) => value)
+                    .join('\n\n');
+                break;
+
+            case "only":
+                allContrContent = Object.entries(controller)
+                    .filter(([key]) => paramContent.includes(key))
+                    .map(([, value]) => value)
+                    .join('\n\n');
+                break;
+        
+                default:
+                    console.log(chalk.red(`"${paramType}" n'est pas un paramètre valide`));
+                    return;
+        }
+        
+        
+    }
+    else{
+
+        allContrContent = (
+            Object.values(controller)
+            .join('\n\n')
+        );
+    }
 
     try {
+        
         // verify if the file already exists
         if (await fs.pathExists(ctrlFile)) {
             console.log(chalk.yellow(`${route}Controller.js already exist`));
@@ -44,6 +77,7 @@ export async function makeCtrl(route) {
         await fs.ensureDir(ctrlDir)
 
         await fs.writeFile(ctrlFile ,allContrContent)
+        
 
         console.log(chalk.green(`Controller created at ${ctrlDir}`));
         

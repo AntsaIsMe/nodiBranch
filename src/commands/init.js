@@ -57,6 +57,16 @@ export async function initProj() {
 
     await depInstall(userPath);
 
+    if (personalisable.includes('crud')) {
+      const routeName = answers.routeName?.trim() || 'user';
+      
+      const { makeRoute } = await import('./makeRoute.js');
+      
+      await makeRoute(routeName);
+      
+    }
+
+
   } catch (error) {
     if (error.isTtyError) {
       console.error("Problème d'affichage du terminal.");

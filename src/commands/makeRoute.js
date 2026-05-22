@@ -5,7 +5,7 @@ import fs from 'fs-extra';
 import path from 'path';
 
 
-export async function makeRoute(route) {
+export async function makeRoute(route, paramType = null, paramContent = null) {
     if (!route) {
         console.log(chalk.red("Entrez le nom du fichier de route"));
         return
@@ -27,7 +27,7 @@ export async function makeRoute(route) {
         // create the dir if !exist
         await fs.ensureDir(routeDir)
 
-        await makeCtrl(route)
+        await makeCtrl(route, paramType, paramContent)
         await fs.writeFile(routeFile, routeTemplate(routeMin))
         console.log(chalk.green('File created ' + routeFile));
     } catch (error) {
