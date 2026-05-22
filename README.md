@@ -1,6 +1,6 @@
 # Nodibranch
 
-> Scaffold your Node.js/Express projects in seconds — routes, controllers, and full project structure, without the boilerplate headache.
+> Stop wasting time on setup. Engineered to eliminate repetition. Instantly generate comprehensive Node.js/Express structures, seamlessly connecting routes, controllers, and folders..
 
 [![npm version](https://img.shields.io/npm/v/nodibranch)](https://www.npmjs.com/package/nodibranch)
 
