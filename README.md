@@ -6,7 +6,7 @@
 
 ---
 
-![Nodibranch interactive menu](https://github.com/AntsaIsMe/nodiBranch/nodibranch/src/preview.png)
+![Nodibranch interactive menu](https://github.com/AntsaIsMe/nodiBranch/blob/main/src/preview.png)
 
 ---
 
