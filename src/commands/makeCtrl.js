@@ -15,9 +15,6 @@ const controller = {
     update: updateTemplate(),
     delete: deleteTemplate()
 };
-const pathNow = process.cwd();
-const ctrlDir = path.join(pathNow, 'src', 'controllers');
-const ctrlFile = path.join(ctrlDir, `${routeN}Controller.js`);
 
 export async function makeCtrl(route, paramType = null, paramContent = null) {
     if (!route) {

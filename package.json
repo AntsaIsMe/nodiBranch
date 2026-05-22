@@ -10,9 +10,10 @@
     "nb": "./bin/cli.mjs"
   },
   "dependencies": {
+    "@inquirer/prompts": "^7.10.1",
+    "chalk": "^5.3.0",
     "cli-progress": "^3.12.0",
     "fs-extra": "^11.2.0",
-    "inquirer": "^9.2.12",
-    "chalk": "^5.3.0"
+    "inquirer": "^9.2.12"
   }
 }

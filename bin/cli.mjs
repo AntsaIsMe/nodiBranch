@@ -23,6 +23,13 @@ const [paramType, paramContent] = command2
 
 
 async function run() {
+  const isHelpRequested = args.slice(1).some(arg => ['-h', '--h', 'help', '--help'].includes(arg));
+  if (isHelpRequested && command) {
+    const { help } = await import('../src/commands/help.js');
+    help(command);
+    return;
+  }
+
   switch (command) {
     case "init":
     case "-i": {
