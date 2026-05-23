@@ -33,7 +33,6 @@ npm install -g nodibranch
 # for local installation
 npm install nodibranch
 
-# for global installation
 npx nodibranch
 ```
 
