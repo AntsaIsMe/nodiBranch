@@ -25,15 +25,13 @@ function printHeader(subTitle) {
 function showInitHelp() {
   console.log(`
   ${chalk.yellow.bold('1. INITIALISATION')} (${chalk.green('init')}, ${chalk.green('-i')})
-    ${chalk.gray("Initialise un nouveau projet Nodibranch dans le dossier courant.")}
-    Configure l'architecture du projet, copie les templates, crée le fichier ${chalk.blue('.env')} et installe les dépendances.
+    ${chalk.gray("Initialise un nouveau projet node + express avec architecture complete dans le dossier courant.")}
+    Configure l'architecture du projet, crée un templates, crée le fichier ${chalk.blue('.env')} et installe les dépendances.
     
     ${chalk.yellow.bold('Usage :')}
       nb init
       nb -i
-      
-    ${chalk.yellow.bold('Exemple :')}
-      nb init
+
   `);
 }
 
@@ -111,7 +109,7 @@ export function help(cmd = null) {
   printHeader('H E L P');
   
   console.log(`
-    ${chalk.gray('générateur de boilerplates & scaffolding ultra-rapide')}
+    ${chalk.gray('générateur de d\'architecture de projet node+express et de template')}
     
     ${chalk.yellow.bold('USAGE GÉNÉRAL :')}
       ${chalk.green('nb')}                                Lance l'interface interactive de sélection

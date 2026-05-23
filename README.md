@@ -27,7 +27,14 @@ Nodibranch (`nb`) is a lightweight CLI that removes the repetitive setup work fr
 ## Installation
 
 ```bash
+# for global installation
 npm install -g nodibranch
+
+# for local installation
+npm install nodibranch
+
+# for global installation
+npx nodibranch
 ```
 
 Available as both `nodibranch` and the short alias `nb`.

@@ -51,7 +51,6 @@ export default async function depInstall(targetDir) {
         resolve();
       } else {
         progressBar.stop();
-        // ← affiche le vrai message d'erreur npm
         console.error(chalk.red(`\nnpm error:\n${errorOutput}`));
         reject(new Error("Can't summon dependencies. Check your internet connection."));
       }

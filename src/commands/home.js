@@ -89,7 +89,7 @@ export async function home() {
         },
         {
           name: 'Quitter', value: 'exit',
-          description: "Ferme l'application CLI."
+          description: "Don\'t you dare !!."
         },
       ],
     });
