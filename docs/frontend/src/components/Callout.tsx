@@ -8,7 +8,7 @@ interface CalloutProps {
   children: React.ReactNode;
 }
 
-const Callout = ({ type, title, children }: CalloutProps) => {
+export default function Callout({ type, title, children }: CalloutProps) {
   const styles = {
     tip: {
       bg: 'bg-secondary/20',
@@ -35,6 +35,4 @@ const Callout = ({ type, title, children }: CalloutProps) => {
       <div className="text-sm text-gray-700">{children}</div>
     </div>
   );
-};
-
-export default Callout;
+}

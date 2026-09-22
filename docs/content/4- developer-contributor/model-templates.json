@@ -1,0 +1,20 @@
+{
+  "id": "model-templates",
+  "title": "Model Templates",
+  "filePath": "docs/content/developer-contributor/model-templates.json",
+  "description": "How to customize the generated code.",
+  "sections": [
+    {
+      "id": "customizing-the-style",
+      "title": "Customizing the Style",
+      "content": "The generated code is governed by templates in `src/models/`. To change the default response format or add a logger, simply edit the string returned by the template functions.",
+      "examples": [
+        {
+          "type": "raw",
+          "code": "src/models/create.js",
+          "explanation": "Template file handling POST/Create logic"
+        }
+      ]
+    }
+  ]
+}

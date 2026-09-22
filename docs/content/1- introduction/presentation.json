@@ -1,0 +1,20 @@
+{
+  "id": "presentation",
+  "title": "Presentation",
+  "filePath": "docs/content/introduction/presentation.json",
+  "description": "Overview of the framework and its philosophy of eliminating repetition.",
+  "sections": [
+    {
+      "id": "what-is-nodibranch",
+      "title": "What is Nodibranch?",
+      "content": "Nodibranch is a lightweight CLI tool designed to eliminate the repetitive setup work associated with starting new Express.js projects. Most developers face \"setup fatigue\": creating the same folders, configuring environment files, and writing the same basic CRUD functions for every new resource. Nodibranch shifts the focus from setup to feature development by automating the project skeleton.",
+      "examples": [
+        {
+          "type": "raw",
+          "code": "Value Propositions:\\n- Instant Infrastructure: Zero to structured project in one command.\\n- Consistent Architecture: Professional folder structure that scales.\\n- CRUD on Autopilot: Pre-wired routes and controllers.\\n- Guided Experience: Interactive menu or raw CLI speed.",
+          "explanation": "Core advantages of using Nodibranch"
+        }
+      ]
+    }
+  ]
+}

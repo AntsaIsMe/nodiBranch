@@ -1,0 +1,26 @@
+{
+  "id": "internal-architecture",
+  "title": "Internal Architecture",
+  "filePath": "docs/content/developer-contributor/internal-architecture.json",
+  "description": "Technical breakdown of the CLI internals.",
+  "sections": [
+    {
+      "id": "cli-entry-point",
+      "title": "CLI Entry Point",
+      "content": "The entry point in `bin/cli.mjs` orchestrates the tool. It parses arguments, handles help flags, and uses dynamic imports to load only the required command module, keeping the CLI fast.",
+      "examples": [
+        {
+          "type": "raw",
+          "code": "User Input -> cli.mjs -> src/commands/[command].js -> src/utils/",
+          "explanation": "Logic flow of a CLI command"
+        }
+      ]
+    },
+    {
+      "id": "the-template-engine",
+      "title": "The Template Engine",
+      "content": "Nodibranch uses a \"Functional Template\" approach. While `init` uses static files, route and controller generation uses JavaScript functions in `src/models/` that return template strings, allowing for dynamic injection of names and filtered methods.",
+      "examples": []
+    }
+  ]
+}

@@ -21,8 +21,7 @@ src/components/common/: reusable, page-agnostic UI (Button, Badge, Card, Input, 
 src/components/<ComponentName>/: one folder per non-common component
 <ComponentName>.jsx: main component (composition only, stays short)
 <SubComponent>.jsx: internal sub-components specific to this component
-index.js: re-export (export { default } from './ComponentName')
-co-located styles
+
 src/constant/: constants (route names, external links, etc.)
 src/contexts/: React Context providers (theme, nav state)
 src/data/: static content data (not fetched — e.g. nav tree, page metadata)
@@ -71,3 +70,11 @@ No commented-out code left in commits
 Prefer clear naming over comments when possible
 Refactor rule
 Before marking a page "done" in PAGES.md, check: duplicated JSX (extract to common/), oversized files (split into sub-components), mixed logic/rendering (extract to hooks/)
+
+## Component declaration style
+- Use function declarations, not arrow functions assigned to const
+- `export default function ComponentName() { ... }` — not 
+  `const ComponentName = () => { ... }; export default ComponentName;`
+- Same for named (non-default) components: `export function ComponentName() { ... }`
+- Applies to components only — hooks and utils can stay as `const` arrow functions 
+  if that's already the project convention

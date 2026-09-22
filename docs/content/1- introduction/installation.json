@@ -1,0 +1,40 @@
+{
+  "id": "installation",
+  "title": "Installation",
+  "filePath": "docs/content/introduction/installation.json",
+  "description": "Step-by-step guide to getting the tool on your machine.",
+  "sections": [
+    {
+      "id": "installation-options",
+      "title": "Installation Options",
+      "content": "Nodibranch can be installed globally for use across all projects, locally for a specific project, or executed on-the-fly without installation.",
+      "examples": [
+        {
+          "type": "cli",
+          "code": "npm install -g nodibranch",
+          "explanation": "Global installation for system-wide access"
+        },
+        {
+          "type": "cli",
+          "code": "nb -h",
+          "explanation": "Testing the installation with the help flag"
+        },
+        {
+          "type": "cli",
+          "code": "npm install nodibranch",
+          "explanation": "Local installation as a project dependency"
+        },
+        {
+          "type": "cli",
+          "code": "npx nodibranch -h",
+          "explanation": "Running a local installation via npx"
+        },
+        {
+          "type": "cli",
+          "code": "npx nodibranch init",
+          "explanation": "On-the-fly execution without installation"
+        }
+      ]
+    }
+  ]
+}

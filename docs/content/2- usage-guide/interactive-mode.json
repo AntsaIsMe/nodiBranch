@@ -1,0 +1,18 @@
+{
+  "id": "interactive-mode",
+  "title": "Interactive Mode",
+  "filePath": "docs/content/usage-guide/interactive-mode.json",
+  "description": "Guide to the visual menu system for beginners.",
+  "sections": [
+    {
+      "id": "finding-your-way",
+      "title": "Finding Your Way",
+      "content": "Not a fan of memorizing complex terminal commands? No problem. Nodibranch comes with a friendly, interactive menu that guides you through every option, providing live descriptions for each available action.",
+      "examples": [
+        { "type": "cli", "code": "nb", "explanation": "Launch the interactive menu" },
+        { "type": "cli", "code": "node bin/cli.mjs", "explanation": "Launch the interactive menu via node" },
+        { "type": "raw", "code": "Choisissez une fonctionnalité à exécuter :\\n > Initialiser un nouveau projet\\n   Générer une Route & un Contrôleur\\n   Générer un Contrôleur seul\\n   Afficher l'aide\\n   Quitter", "explanation": "Visual representation of the interactive menu" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "project-structure",
+  "title": "Project Structure",
+  "filePath": "docs/content/project-structure.json",
+  "description": "The \"Balanced House\" architecture.",
+  "sections": [
+    {
+      "id": "your-project-map",
+      "title": "Your Project Map",
+      "content": "A balanced architecture prevents spaghetti code. Every file has a specific purpose, ensuring that as your project grows, it remains maintainable and easy to navigate.",
+      "examples": [
+        {
+          "type": "raw",
+          "code": "project-root/\\n├── src/\\n│   ├── config/       # Database connection settings\\n│   ├── controllers/  # Business logic for each route\\n│   ├── middlewares/  # Request interceptors (e.g., upload.js)\\n│   ├── models/       # Data schemas and database logic\\n│   ├── routes/       # API endpoint definitions\\n│   └── index.js      # Application entry point\\n├── uploads/          # Storage for uploaded files (optional)\\n├── .env              # Environment variables\\n└── package.json      # Tool manifest",
+          "explanation": "Standard project directory tree"
+        }
+      ]
+    }
+  ]
+}
