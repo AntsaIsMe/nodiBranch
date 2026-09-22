@@ -1,0 +1,445 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><title>Nodibranch Technical Documentation</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"primary-fixed": "#e2e2e2", "on-error-container": "#93000a", "on-tertiary-container": "#f7fff1", "error-container": "#ffdad6", "tertiary-fixed-dim": "#add0a6", "primary-container": "#737575", surface: "#ecffe4", "tertiary-fixed": "#c8ecc0", "inverse-on-surface": "#cbfec1", "surface-tint": "#5d5f5f", "on-error": "#ffffff", "on-tertiary": "#ffffff", "surface-bright": "#ecffe4", "on-secondary-fixed": "#002021", "surface-container-lowest": "#ffffff", "surface-variant": "#bdf0b3", "surface-container-highest": "#bdf0b3", primary: "#5a5c5c", "on-background": "#002203", tertiary: "#456441", "on-secondary-fixed-variant": "#014f52", secondary: "#27676a", "on-primary-fixed": "#1a1c1c", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#304e2d", "surface-container-high": "#c3f6b9", outline: "#717785", "primary-fixed-dim": "#c6c6c7", "surface-container": "#c8fbbe", "surface-dim": "#b5e7ab", error: "#ba1a1a", "on-primary-fixed-variant": "#454747", "on-surface-variant": "#414753", "inverse-surface": "#0c390f", "on-secondary": "#ffffff", "secondary-fixed": "#afedf0", "on-tertiary-fixed": "#042106", "secondary-fixed-dim": "#94d1d4", "secondary-container": "#adebee", "surface-container-low": "#d5ffcb", "inverse-primary": "#c6c6c7", "outline-variant": "#c1c6d5", "tertiary-container": "#5d7d58", "on-secondary-container": "#2d6c6f", "on-surface": "#002203", background: "#ecffe4", "on-primary-container": "#fcfcfc"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "1.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-md": "1rem", margin: "2rem", "space-xl": "2.5rem", "space-xs": "0.25rem"}, fontFamily: {"headline-xl-mobile": ["Inter"], "label-sm": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-xl": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "code-block": ["JetBrains Mono"], "code-inline": ["JetBrains Mono"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-lg-mobile": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"headline-xl-mobile": ["30px", {lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "700"}], "label-sm": ["11px", {lineHeight: "14px", fontWeight: "500"}], "label-lg": ["14px", {lineHeight: "20px", fontWeight: "500"}], "label-md": ["12px", {lineHeight: "16px", fontWeight: "500"}], "headline-md": ["22px", {lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-xl": ["40px", {lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700"}], "headline-lg": ["30px", {lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "22px", fontWeight: "400"}], "code-block": ["13px", {lineHeight: "22px", fontWeight: "400"}], "code-inline": ["13px", {lineHeight: "18px", fontWeight: "400"}], "headline-sm": ["17px", {lineHeight: "24px", fontWeight: "600"}], "body-sm": ["13px", {lineHeight: "18px", fontWeight: "400"}], "body-lg": ["16px", {lineHeight: "26px", fontWeight: "400"}], "headline-lg-mobile": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}]}}}};</script></head><body class="bg-surface-container-lowest text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-[#1d5f62] border-b border-white/15 text-white"><div class="h-16 w-full px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="Nodibranch Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VIQtwKyN6ZkvkdUbqVJ74tvxgDspVgbhsL4nn0nDYnTDcS5Alaq6Rzn5yk_1pxdOFyOP9gMlMx9MQhCMMspb9oCcKcyJ3NRWtyaeulovEkl7dC5ICVwJWh9Kp1H2jo3c7G27fGYyLZPSyOOT_MzMnTn5a1_FWgczAMTnmRR1oV0JnmRal6rRMQ3D688A4TC1cJDwZBUwT1WzbSHptGvQX6aIDMxSmSh4tOsI1LeNTSUusc6lKFnTzs6YIzR88YfYVnZsl-wQRBXw"><span class="font-headline-sm text-headline-sm text-white tracking-tight font-bold">Nodibranch</span><span class="bg-white/15 text-white px-space-xs py-0.5 rounded font-label-sm text-label-sm border border-white/20">v1.0.0</span></a><nav class="hidden xl:flex items-center gap-space-md pl-space-sm"><a class="font-body-sm text-body-sm text-white/80 hover:text-white transition-colors" data-path="home" href="#">Home</a><a aria-current="page" class="transition-colors text-white font-headline-sm font-semibold" data-path="documentation" href="#">Documentation</a><a class="font-body-sm text-body-sm text-white/80 hover:text-white transition-colors" data-path="interactive-playground" href="#">Interactive Playground</a><a class="font-body-sm text-body-sm text-white/80 hover:text-white transition-colors" data-path="showcase" href="#">Showcase</a></nav></div><div class="flex-1 max-w-md mx-space-sm hidden md:block"><div class="relative flex items-center w-full bg-black/15 rounded-lg px-space-md py-1.5 border border-white/20 focus-within:border-white transition-all"><span class="material-symbols-outlined text-white/70 text-[18px] mr-space-sm">search</span><span class="font-body-sm text-body-sm text-white/70 flex-1 select-none">Search documentation...</span><kbd class="flex items-center gap-0.5 bg-white/10 px-1.5 py-0.5 rounded text-white/90 border border-white/20 font-label-sm text-label-sm shadow-sm"><span class="text-[10px]">⌘</span>K</kbd></div></div><div class="flex items-center gap-space-sm"><button aria-label="Toggle color scheme" class="p-1.5 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><a class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded bg-[#c6eabe] text-[#191f34] font-body-sm text-body-sm font-semibold hover:bg-white transition-colors shadow-sm" data-path="documentation" href="#">Get Started</a></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-[#1d5f62] border-r border-white/15 z-40 overflow-y-auto px-space-md py-space-lg flex flex-col gap-space-lg text-white"><div class="flex flex-col gap-space-xs"><div class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-white/60 px-space-sm mb-space-xs">Getting Started</div><nav class="flex flex-col gap-0.5"><a aria-current="page" class="flex items-center px-space-sm py-1.5 rounded transition-colors bg-white/15 text-white font-headline-sm border-l-2 border-[#c6eabe]" data-path="documentation" href="#">Overview &amp; Philosophy</a><a class="flex items-center px-space-sm py-1.5 rounded text-white/80 hover:bg-white/10 hover:text-white font-body-sm text-body-sm transition-colors" data-path="installation-guide" href="#">Installation &amp; Setup</a><a class="flex items-center px-space-sm py-1.5 rounded text-white/80 hover:bg-white/10 hover:text-white font-body-sm text-body-sm transition-colors" data-path="first-bundle" href="#">Creating Your First Bundle</a></nav></div><div class="flex flex-col gap-space-xs"><div class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-white/60 px-space-sm mb-space-xs">Architecture Core</div><nav class="flex flex-col gap-0.5"><a class="flex items-center px-space-sm py-1.5 rounded text-white/80 hover:bg-white/10 hover:text-white font-body-sm text-body-sm transition-colors" data-path="dependency-injection" href="#">Service Container &amp; DI</a><a class="flex items-center px-space-sm py-1.5 rounded text-white/80 hover:bg-white/10 hover:text-white font-body-sm text-body-sm transition-colors" data-path="kernel-lifecycle" href="#">Kernel Request Lifecycle</a><a class="flex items-center px-space-sm py-1.5 rounded text-white/80 hover:bg-white/10 hover:text-white font-body-sm text-body-sm transition-colors" data-path="event-dispatcher" href="#">Event Dispatcher</a><a class="flex items-center px-space-sm py-1.5 rounded text-white/80 hover:bg-white/10 hover:text-white font-body-sm text-body-sm transition-colors" data-path="configuration-compiler" href="#">Compiler Passes</a></nav></div><div class="flex flex-col gap-space-xs"><div class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-white/60 px-space-sm mb-space-xs">HTTP &amp; Routing</div><nav class="flex flex-col gap-0.5"><a class="flex items-center px-space-sm py-1.5 rounded text-white/80 hover:bg-white/10 hover:text-white font-body-sm text-body-sm transition-colors" data-path="controllers-routing" href="#">Attributes &amp; Controllers</a><a class="flex items-center px-space-sm py-1.5 rounded text-white/80 hover:bg-white/10 hover:text-white font-body-sm text-body-sm transition-colors" data-path="middleware-pipeline" href="#">Middleware Pipeline</a><a class="flex items-center px-space-sm py-1.5 rounded text-white/80 hover:bg-white/10 hover:text-white font-body-sm text-body-sm transition-colors" data-path="validation-dto" href="#">DTO &amp; Request Validation</a></nav></div><div class="mt-auto p-space-sm bg-white/10 rounded border border-white/15"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-white/70">Need Help?</span><span class="font-label-sm text-label-sm text-[#c6eabe] font-semibold">v1.0.0-rc.3</span></div><p class="font-body-sm text-body-sm text-white/80 mt-1">Join our Discord for real-time architecture feedback.</p></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1440px] mx-auto px-space-md lg:px-margin py-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Sub-Navigation Left Rail -->
+
+<!-- Center Content Canvas -->
+<article class="col-span-1 lg:col-span-9 xl:col-span-9 min-w-0 flex flex-col gap-space-lg">
+<!-- Breadcrumbs & Meta Tag Line -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-outline">
+<a class="hover:text-on-surface transition-colors" href="#">Docs</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-on-surface transition-colors" href="#">Getting Started</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-medium">Installation</span>
+</div>
+
+</div>
+<!-- Document Title Block -->
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Installation &amp; Quickstart
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Get up and running with Nodibranch in under two minutes. Nodibranch marries the declarative architectural elegance of Symfony with the asynchronous speed and type inference of modern TypeScript.
+          </p>
+</div>
+<!-- Prerequisites Section -->
+<section class="flex flex-col gap-space-sm pt-space-xs" id="prerequisites">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[26px]">terminal</span>
+            Prerequisites
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Before initializing your service, verify your local runtime. Nodibranch is optimized for Node.js LTS, but runs seamlessly with modern package managers and alternative runtimes like Bun.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-outline">Node Runtime</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">&gt;= 18.0.0 LTS</span>
+<span class="font-body-sm text-body-sm text-secondary">Active maintenance</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-outline">TypeScript</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">5.0 or Higher</span>
+<span class="font-body-sm text-body-sm text-primary-container">Legacy &amp; 5.4 Decorators</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-outline">Package Manager</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">npm / pnpm / bun</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lockfile compatible</span>
+</div>
+</div>
+</section>
+<!-- Tip Callout: Quick Boilerplate -->
+<div class="p-space-md rounded-xl bg-[#c6eabe]/30 border border-[#1d5f62]/20 flex items-start gap-space-md"><span class="material-symbols-outlined text-[#1d5f62] text-[24px] mt-0.5">tips_and_updates</span><div class="flex flex-col gap-1 min-w-0"><span class="font-headline-sm text-headline-sm text-[#191f34] font-semibold">Fast-track via CLI generator</span><p class="font-body-md text-body-md text-[#191f34]">Rather than installing manually, run <code class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-code-inline text-code-inline text-[#1d5f62] font-semibold">npm create nodibranch@latest</code> to bootstrap an opinionated bundle with routing, Prisma ORM, and Jest preconfigured.</p></div></div>
+<!-- Step 1: Installation -->
+<section class="flex flex-col gap-space-md pt-space-xs" id="installation">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">1</span>
+              Install Dependencies
+            </h2>
+<span class="font-label-sm text-label-sm text-outline">Production + Dev Packages</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Install the core bundle and its required metadata reflector into your project:
+          </p>
+<!-- Interactive Code Block with Manager Tabs -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl overflow-hidden shadow-md">
+<!-- Tabs Bar -->
+<div class="bg-[#1f2937] px-space-md py-2 flex items-center justify-between border-b border-white/10">
+<div class="flex items-center gap-1 text-label-sm font-label-sm" id="pm-tabs">
+<button class="pm-tab active px-2.5 py-1 rounded bg-primary-container text-on-primary font-medium transition-all" data-target="npm" onclick="switchPackageManager('npm')" type="button">npm</button>
+<button class="pm-tab px-2.5 py-1 rounded text-outline-variant hover:text-white transition-all" data-target="pnpm" onclick="switchPackageManager('pnpm')" type="button">pnpm</button>
+<button class="pm-tab px-2.5 py-1 rounded text-outline-variant hover:text-white transition-all" data-target="yarn" onclick="switchPackageManager('yarn')" type="button">yarn</button>
+<button class="pm-tab px-2.5 py-1 rounded text-outline-variant hover:text-white transition-all" data-target="bun" onclick="switchPackageManager('bun')" type="button">bun</button>
+</div>
+<button class="flex items-center gap-1.5 px-2 py-1 rounded hover:bg-white/10 text-outline-variant hover:text-white transition-all font-label-sm text-label-sm" onclick="copySnippet('pkg-cmd-npm', this)" type="button">
+<span class="material-symbols-outlined text-[16px] copy-icon">content_copy</span>
+<span class="copy-label">Copy</span>
+</button>
+</div>
+<!-- Shell Terminal Body -->
+<div class="p-space-md font-code-block text-code-block overflow-x-auto">
+<div class="pm-view block" id="cmd-npm">
+<span class="text-tertiary-fixed-dim">$</span> <span class="text-primary-fixed font-semibold" id="pkg-cmd-npm">npm i nodibranch @nodibranch/core reflect-metadata</span>
+</div>
+<div class="pm-view hidden" id="cmd-pnpm">
+<span class="text-tertiary-fixed-dim">$</span> <span class="text-primary-fixed font-semibold" id="pkg-cmd-pnpm">pnpm add nodibranch @nodibranch/core reflect-metadata</span>
+</div>
+<div class="pm-view hidden" id="cmd-yarn">
+<span class="text-tertiary-fixed-dim">$</span> <span class="text-primary-fixed font-semibold" id="pkg-cmd-yarn">yarn add nodibranch @nodibranch/core reflect-metadata</span>
+</div>
+<div class="pm-view hidden" id="cmd-bun">
+<span class="text-tertiary-fixed-dim">$</span> <span class="text-primary-fixed font-semibold" id="pkg-cmd-bun">bun add nodibranch @nodibranch/core reflect-metadata</span>
+</div>
+</div>
+</div>
+<!-- Info Callout: Symfony Dev Note -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary-container text-[24px] mt-0.5">info</span>
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface">Symfony Developer Note</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Nodibranch uses TypeScript experimental decorators and <code class="bg-surface-container-highest px-1 py-0.5 rounded font-code-inline text-code-inline text-primary">reflect-metadata</code> to deliver Symfony-identical autowiring without needing XML or YAML service definitions.
+              </p>
+</div>
+</div>
+</section>
+<!-- Step 2: TypeScript Configuration -->
+<section class="flex flex-col gap-space-md pt-space-xs" id="tsconfig">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">2</span>
+              Configure tsconfig.json
+            </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Because Nodibranch relies on design-time parameter reflection for dependency injection, you must enable metadata emission in your compiler flags.
+          </p>
+<!-- Warning Callout -->
+<div class="p-space-md rounded-xl bg-error-container/60 text-on-error-container flex items-start gap-space-md">
+<span class="material-symbols-outlined text-error text-[24px] mt-0.5">warning</span>
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-error-container">Compiler Settings Required</span>
+<p class="font-body-md text-body-md text-on-error-container">
+                Ensure <code class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-code-inline text-code-inline text-error font-semibold">"experimentalDecorators": true</code> and <code class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-code-inline text-code-inline text-error font-semibold">"emitDecoratorMetadata": true</code> are enabled in your <code class="font-code-inline text-code-inline">tsconfig.json</code>, otherwise constructors will fail to resolve dependencies.
+              </p>
+</div>
+</div>
+<!-- tsconfig Code snippet -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl overflow-hidden shadow-md">
+<div class="bg-[#1f2937] px-space-md py-2 flex items-center justify-between border-b border-white/10">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline-variant">tsconfig.json</span>
+<span class="font-label-sm text-label-sm bg-surface-container-high/20 text-on-primary-container px-1.5 rounded">JSON</span>
+</div>
+<button class="flex items-center gap-1.5 px-2 py-1 rounded hover:bg-white/10 text-outline-variant hover:text-white transition-all font-label-sm text-label-sm" onclick="copyCodeElement('tsconfig-snippet', this)" type="button">
+<span class="material-symbols-outlined text-[16px] copy-icon">content_copy</span>
+<span class="copy-label">Copy</span>
+</button>
+</div>
+<pre class="p-space-md font-code-block text-code-block overflow-x-auto leading-relaxed"><code class="text-surface-container" id="tsconfig-snippet">{
+  <span class="text-tertiary-fixed-dim">"compilerOptions"</span>: {
+    <span class="text-tertiary-fixed-dim">"target"</span>: <span class="text-primary-fixed">"ES2022"</span>,
+    <span class="text-tertiary-fixed-dim">"module"</span>: <span class="text-primary-fixed">"commonjs"</span>,
+    <span class="text-tertiary-fixed-dim">"moduleResolution"</span>: <span class="text-primary-fixed">"node"</span>,
+    <span class="text-tertiary-fixed-dim">"experimentalDecorators"</span>: <span class="text-secondary-fixed">true</span>,        <span class="text-outline">// Required for Nodibranch attributes</span>
+    <span class="text-tertiary-fixed-dim">"emitDecoratorMetadata"</span>: <span class="text-secondary-fixed">true</span>,         <span class="text-outline">// Required for Constructor Autowiring</span>
+    <span class="text-tertiary-fixed-dim">"strict"</span>: <span class="text-secondary-fixed">true</span>,
+    <span class="text-tertiary-fixed-dim">"esModuleInterop"</span>: <span class="text-secondary-fixed">true</span>
+  }
+}</code></pre>
+</div>
+</section>
+<!-- Step 3: First Controller -->
+<section class="flex flex-col gap-space-md pt-space-xs" id="first-controller">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">3</span>
+              Creating Your First Controller
+            </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Controllers handle incoming HTTP queries. Services declared in the constructor parameter signature are automatically autowired by the Marine DI container.
+          </p>
+<!-- TypeScript Code Snippet -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl overflow-hidden shadow-md">
+<div class="bg-[#1f2937] px-space-md py-2 flex items-center justify-between border-b border-white/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">code</span>
+<span class="font-label-sm text-label-sm text-outline-variant">src/controllers/api.controller.ts</span>
+<span class="font-label-sm text-label-sm bg-primary-container/40 text-on-primary-container px-1.5 rounded">TS</span>
+</div>
+<button class="flex items-center gap-1.5 px-2 py-1 rounded hover:bg-white/10 text-outline-variant hover:text-white transition-all font-label-sm text-label-sm" onclick="copyCodeElement('controller-snippet', this)" type="button">
+<span class="material-symbols-outlined text-[16px] copy-icon">content_copy</span>
+<span class="copy-label">Copy</span>
+</button>
+</div>
+<pre class="p-space-md font-code-block text-code-block overflow-x-auto leading-relaxed"><code class="text-surface-container" id="controller-snippet"><span class="text-tertiary-fixed-dim">import</span> { Controller, Get, Inject } <span class="text-tertiary-fixed-dim">from</span> <span class="text-primary-fixed">'nodibranch'</span>;
+<span class="text-tertiary-fixed-dim">import</span> { HealthService } <span class="text-tertiary-fixed-dim">from</span> <span class="text-primary-fixed">'./services/health.service'</span>;
+
+<span class="text-on-tertiary-container font-semibold">@Controller</span>(<span class="text-primary-fixed">'/api/v1'</span>)
+<span class="text-tertiary-fixed-dim">export class</span> <span class="text-primary-fixed font-bold">ApiController</span> {
+  <span class="text-tertiary-fixed-dim">constructor</span>(
+    <span class="text-outline">// HealthService is resolved automatically via Service Autowiring</span>
+    <span class="text-tertiary-fixed-dim">private readonly</span> healthService: HealthService
+  ) {}
+
+  <span class="text-on-tertiary-container font-semibold">@Get</span>(<span class="text-primary-fixed">'/health'</span>)
+  <span class="text-tertiary-fixed-dim">public</span> <span class="text-secondary-fixed">check</span>() {
+    <span class="text-tertiary-fixed-dim">return</span> <span class="text-tertiary-fixed-dim">this</span>.healthService.<span class="text-secondary-fixed">getStatus</span>();
+  }
+}</code></pre>
+</div>
+</section>
+<!-- Step 4: Bootstrapping the Application -->
+<section class="flex flex-col gap-space-md pt-space-xs" id="bootstrapping">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">4</span>
+              Bootstrapping the Server
+            </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Initialize the runtime kernel with <code class="font-code-inline text-code-inline text-primary-container font-medium">NodibranchFactory.create()</code>. This compiles the autowired service container and mounts the HTTP request pipeline.
+          </p>
+<!-- Server bootstrap snippet -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl overflow-hidden shadow-md">
+<div class="bg-[#1f2937] px-space-md py-2 flex items-center justify-between border-b border-white/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">play_circle</span>
+<span class="font-label-sm text-label-sm text-outline-variant">src/main.ts</span>
+<span class="font-label-sm text-label-sm bg-primary-container/40 text-on-primary-container px-1.5 rounded">TS</span>
+</div>
+<button class="flex items-center gap-1.5 px-2 py-1 rounded hover:bg-white/10 text-outline-variant hover:text-white transition-all font-label-sm text-label-sm" onclick="copyCodeElement('bootstrap-snippet', this)" type="button">
+<span class="material-symbols-outlined text-[16px] copy-icon">content_copy</span>
+<span class="copy-label">Copy</span>
+</button>
+</div>
+<pre class="p-space-md font-code-block text-code-block overflow-x-auto leading-relaxed"><code class="text-surface-container" id="bootstrap-snippet"><span class="text-tertiary-fixed-dim">import</span> <span class="text-primary-fixed">'reflect-metadata'</span>;
+<span class="text-tertiary-fixed-dim">import</span> { NodibranchFactory } <span class="text-tertiary-fixed-dim">from</span> <span class="text-primary-fixed">'nodibranch'</span>;
+<span class="text-tertiary-fixed-dim">import</span> { AppModule } <span class="text-tertiary-fixed-dim">from</span> <span class="text-primary-fixed">'./app.module'</span>;
+
+<span class="text-tertiary-fixed-dim">async function</span> <span class="text-secondary-fixed">bootstrap</span>() {
+  <span class="text-outline">// Creates kernel, compiles container pass, and boots pipeline</span>
+  <span class="text-tertiary-fixed-dim">const</span> app = <span class="text-tertiary-fixed-dim">await</span> NodibranchFactory.<span class="text-secondary-fixed">create</span>(AppModule, {
+    cors: <span class="text-secondary-fixed">true</span>,
+    logger: [<span class="text-primary-fixed">'log'</span>, <span class="text-primary-fixed">'error'</span>, <span class="text-primary-fixed">'warn'</span>],
+  });
+
+  <span class="text-tertiary-fixed-dim">const</span> port = process.env.PORT || <span class="text-tertiary-fixed">3000</span>;
+  <span class="text-tertiary-fixed-dim">await</span> app.<span class="text-secondary-fixed">listen</span>(port);
+  console.log(<span class="text-primary-fixed">`Nodibranch kernel active on http://localhost:${port}`</span>);
+}
+
+bootstrap();</code></pre>
+</div>
+<!-- Interactive Test Terminal Output Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-outline">Terminal Output</span>
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Ready in 142ms
+              </span>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg font-code-block text-code-block text-on-surface-variant flex flex-col gap-1 overflow-x-auto">
+<div class=""><span class="text-secondary">[NodibranchKernel]</span> Dependency graph compiled: 14 services</div>
+<div class=""><span class="text-primary-container">[RouterMap]</span> Mapped {/api/v1/health, GET} route</div>
+<div class=""><span class="text-on-secondary-fixed-variant font-bold">[HttpServer]</span> Listening on port 3000</div>
+</div>
+</div>
+</section>
+<!-- Step 5: Next Steps & Card Grid -->
+<section class="flex flex-col gap-space-md pt-space-xs" id="next-steps">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Next Steps
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Now that your foundation is verified, explore the structural features that give Nodibranch its power:
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-space-sm" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]">account_tree</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-0.5 group-hover:text-on-surface transition-all text-[18px]">arrow_forward</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors">Dependency Injection</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Master interfaces, factory tokens, tags, and autowiring rules.</p>
+</div>
+</a>
+<a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-space-sm" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]">alt_route</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-0.5 group-hover:text-on-surface transition-all text-[18px]">arrow_forward</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors">Controllers &amp; Routing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Route parameters, validation pipes, guards, and DTO handling.</p>
+</div>
+</a>
+</div>
+</section>
+<!-- Pagination Controls -->
+<div class="flex items-center justify-between pt-space-lg mt-space-md border-t border-surface-container-high">
+<a class="flex flex-col items-start gap-1 text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_back</span>
+              Previous
+            </span>
+<span class="font-headline-sm text-headline-sm text-primary-container">Overview &amp; Philosophy</span>
+</a>
+<a class="flex flex-col items-end gap-1 text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+              Next
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-primary-container">Service Container &amp; DI</span>
+</a>
+</div>
+</article>
+<!-- Right Sidebar: On This Page (Sticky) -->
+<aside aria-label="Table of Contents" class="hidden xl:flex xl:col-span-3 flex-col gap-space-lg sticky top-20 max-h-[calc(100vh-5.5rem)] overflow-y-auto pl-space-md select-none">
+<!-- Table of Contents Widget -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[16px]">subject</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">On this page</span>
+</div>
+<ul class="flex flex-col gap-1 text-body-sm font-body-sm">
+<li class="">
+<a class="toc-link block py-1 px-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="#prerequisites">
+                Prerequisites
+              </a>
+</li>
+<li class="">
+<a class="toc-link block py-1 px-space-xs rounded font-medium text-primary-container bg-surface-container transition-colors" href="#installation">
+                Installation
+              </a>
+</li>
+<li class="">
+<a class="toc-link block py-1 px-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="#tsconfig">
+                tsconfig.json Setup
+              </a>
+</li>
+<li class="">
+<a class="toc-link block py-1 px-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="#first-controller">
+                First Controller
+              </a>
+</li>
+<li class="">
+<a class="toc-link block py-1 px-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="#bootstrapping">
+                Bootstrapping the Server
+              </a>
+</li>
+<li class="">
+<a class="toc-link block py-1 px-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="#next-steps">
+                Next Steps
+              </a>
+</li>
+</ul>
+</div>
+<!-- Quick Interaction Actions -->
+<div class="flex flex-col gap-space-xs pt-space-xs border-t border-surface-container-high">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">Community &amp; Edit</span>
+<a class="flex items-center gap-2 py-1 px-space-xs text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors group" href="https://github.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-primary-container">edit_document</span>
+<span class="">Edit this page on GitHub</span>
+</a>
+<a class="flex items-center gap-2 py-1 px-space-xs text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors group" href="https://discord.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-primary-container">forum</span>
+<span class="">Join our Discord</span>
+</a>
+<button class="flex items-center gap-2 py-1 px-space-xs text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors text-left group" onclick="openAskAssistantModal()" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary group-hover:scale-110 transition-transform">smart_toy</span>
+<span class="">Ask AI Assistant</span>
+</button>
+</div>
+<!-- Interactive Rating / Feedback -->
+
+</aside>
+</div>
+</div>
+<!-- Client-side Interactive Script -->
+<script>
+    function switchPackageManager(pm) {
+      // Toggle Tab Styles
+      const tabs = document.querySelectorAll('#pm-tabs .pm-tab');
+      tabs.forEach(tab => {
+        if (tab.getAttribute('data-target') === pm) {
+          tab.classList.remove('text-outline-variant');
+          tab.classList.add('bg-primary-container', 'text-on-primary', 'font-medium');
+        } else {
+          tab.classList.remove('bg-primary-container', 'text-on-primary', 'font-medium');
+          tab.classList.add('text-outline-variant');
+        }
+      });
+
+      // Toggle views
+      const views = document.querySelectorAll('.pm-view');
+      views.forEach(view => view.classList.add('hidden'));
+      const activeView = document.getElementById('cmd-' + pm);
+      if (activeView) {
+        activeView.classList.remove('hidden');
+        activeView.classList.add('block');
+      }
+    }
+
+    function copySnippet(elementId, btn) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      navigator.clipboard.writeText(el.innerText.trim()).then(() => {
+        showCopyFeedback(btn);
+      });
+    }
+
+    function copyCodeElement(elementId, btn) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      navigator.clipboard.writeText(el.innerText).then(() => {
+        showCopyFeedback(btn);
+      });
+    }
+
+    function showCopyFeedback(btn) {
+      const label = btn.querySelector('.copy-label');
+      const icon = btn.querySelector('.copy-icon');
+      const originalText = label.innerText;
+      const originalIcon = icon.innerText;
+
+      label.innerText = 'Copied!';
+      icon.innerText = 'check';
+      btn.classList.add('text-secondary-fixed');
+
+      setTimeout(() => {
+        label.innerText = originalText;
+        icon.innerText = originalIcon;
+        btn.classList.remove('text-secondary-fixed');
+      }, 2000);
+    }
+
+    function recordFeedback(positive, btn) {
+      const parent = document.getElementById('feedback-actions');
+      const thankyou = document.getElementById('feedback-thankyou');
+      if (parent && thankyou) {
+        parent.classList.add('hidden');
+        thankyou.classList.remove('hidden');
+      }
+    }
+
+    function openAskAssistantModal() {
+      alert('Nodibranch AI Assistant: How can I help you with your controller or DI configuration?');
+    }
+  </script>
+</div></main></div>
+
+</body></html>
