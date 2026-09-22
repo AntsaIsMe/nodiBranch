@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import nodibranchLogo from '../../assets/nodibranch.png';
 import { NAV_STRUCTURE } from '../../constant/nav';
 
 export default function Sidebar() {
+  const [openChapters, setOpenChapters] = useState<Record<string, boolean>>({});
+
+  const toggleChapter = (chapterName: string) => {
+    setOpenChapters(prev => ({
+      ...prev,
+      [chapterName]: !prev[chapterName]
+    }));
+  };
+
   return (
-    <aside className="w-[260px] h-screen sticky top-0 border-r border-primary/20 overflow-y-auto bg-primary text-white flex flex-col">
+    <aside className="w-[260px] h-screen sticky top-0 border-r border-primary/20 overflow-y-auto scrollbar-hide bg-primary text-white flex flex-col">
       <div className="w-full bg-bg flex justify-center py-6">
         <img src={nodibranchLogo} alt="Nodibranch Logo" className="w-32" />
       </div>
@@ -26,15 +35,22 @@ export default function Sidebar() {
                   <div className="space-y-1">
                     {item.chapters.map((chapter, cIdx) => (
                       <div key={cIdx} className="py-1">
-                        <a href={chapter.path} className="block py-1 px-3 text-sm font-medium text-white/90 hover:text-white transition-colors">
+                        <button
+                          onClick={() => toggleChapter(chapter.name)}
+                          className="w-full text-left block py-1 px-3 text-sm font-medium text-white/90 hover:text-white transition-colors"
+                        >
                           {chapter.name}
-                        </a>
-                        <div className="ml-3 mt-1 space-y-1 border-l border-white/10">
-                          {chapter.pages.map((page, pIdx) => (
-                            <a key={pIdx} href={page.path} className="block py-1 px-3 text-xs text-white/60 hover:text-white/90 hover:bg-white/5 rounded-r-md transition-colors">
-                              {page.name}
-                            </a>
-                          ))}
+                        </button>
+                        <div className={`grid transition-all duration-200 ease-in-out ${openChapters[chapter.name] ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                          <div className="overflow-hidden">
+                            <div className="ml-3 mt-1 space-y-1 border-l border-white/10">
+                              {chapter.pages.map((page, pIdx) => (
+                                <a key={pIdx} href={page.path} className="block py-1 px-3 text-xs text-white/60 hover:text-white/90 hover:bg-white/5 rounded-r-md transition-colors">
+                                  {page.name}
+                                </a>
+                              ))}
+                            </div>
+                          </div>
                         </div>
                       </div>
                     ))}
