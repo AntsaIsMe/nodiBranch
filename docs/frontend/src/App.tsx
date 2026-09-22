@@ -1,14 +1,11 @@
-import './App.css'
+import React from 'react';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
 
 function App() {
-
   return (
-    <>
-      <h1>Hello</h1>
-      <img src="./znodibranch.png" alt="damn" />
-      <a href="./assets/nodibranch.png">Fucking link</a>
-    </>
-  )
+    <RouterProvider router={router} />
+  );
 }
 
-export default App
+export default App;

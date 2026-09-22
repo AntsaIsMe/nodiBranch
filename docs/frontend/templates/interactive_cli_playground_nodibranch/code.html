@@ -1,0 +1,465 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Nodibranch Framework</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"primary-fixed": "#e2e2e2", "on-error-container": "#93000a", "on-tertiary-container": "#f7fff1", "error-container": "#ffdad6", "tertiary-fixed-dim": "#add0a6", "primary-container": "#737575", surface: "#ecffe4", "tertiary-fixed": "#c8ecc0", "inverse-on-surface": "#cbfec1", "surface-tint": "#5d5f5f", "on-error": "#ffffff", "on-tertiary": "#ffffff", "surface-bright": "#ecffe4", "on-secondary-fixed": "#002021", "surface-container-lowest": "#ffffff", "surface-variant": "#bdf0b3", "surface-container-highest": "#bdf0b3", primary: "#5a5c5c", "on-background": "#002203", tertiary: "#456441", "on-secondary-fixed-variant": "#014f52", secondary: "#27676a", "on-primary-fixed": "#1a1c1c", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#304e2d", "surface-container-high": "#c3f6b9", outline: "#717785", "primary-fixed-dim": "#c6c6c7", "surface-container": "#c8fbbe", "surface-dim": "#b5e7ab", error: "#ba1a1a", "on-primary-fixed-variant": "#454747", "on-surface-variant": "#414753", "inverse-surface": "#0c390f", "on-secondary": "#ffffff", "secondary-fixed": "#afedf0", "on-tertiary-fixed": "#042106", "secondary-fixed-dim": "#94d1d4", "secondary-container": "#adebee", "surface-container-low": "#d5ffcb", "inverse-primary": "#c6c6c7", "outline-variant": "#c1c6d5", "tertiary-container": "#5d7d58", "on-secondary-container": "#2d6c6f", "on-surface": "#002203", background: "#ecffe4", "on-primary-container": "#fcfcfc"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "1.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-md": "1rem", margin: "2rem", "space-xl": "2.5rem", "space-xs": "0.25rem"}, fontFamily: {"headline-xl-mobile": ["Inter"], "label-sm": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-xl": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "code-block": ["JetBrains Mono"], "code-inline": ["JetBrains Mono"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-lg-mobile": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"headline-xl-mobile": ["30px", {lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "700"}], "label-sm": ["11px", {lineHeight: "14px", fontWeight: "500"}], "label-lg": ["14px", {lineHeight: "20px", fontWeight: "500"}], "label-md": ["12px", {lineHeight: "16px", fontWeight: "500"}], "headline-md": ["22px", {lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-xl": ["40px", {lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700"}], "headline-lg": ["30px", {lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "22px", fontWeight: "400"}], "code-block": ["13px", {lineHeight: "22px", fontWeight: "400"}], "code-inline": ["13px", {lineHeight: "18px", fontWeight: "400"}], "headline-sm": ["17px", {lineHeight: "24px", fontWeight: "600"}], "body-sm": ["13px", {lineHeight: "18px", fontWeight: "400"}], "body-lg": ["16px", {lineHeight: "26px", fontWeight: "400"}], "headline-lg-mobile": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}]}}}};</script></head><body class="bg-white text-[#191f34] antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-[#1d5f62] text-white border-b border-[#1d5f62]/40 shadow-sm"><div class="h-16 w-full px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="Nodibranch Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VIQtwKyN6ZkvkdUbqVJ74tvxgDspVgbhsL4nn0nDYnTDcS5Alaq6Rzn5yk_1pxdOFyOP9gMlMx9MQhCMMspb9oCcKcyJ3NRWtyaeulovEkl7dC5ICVwJWh9Kp1H2jo3c7G27fGYyLZPSyOOT_MzMnTn5a1_FWgczAMTnmRR1oV0JnmRal6rRMQ3D688A4TC1cJDwZBUwT1WzbSHptGvQX6aIDMxSmSh4tOsI1LeNTSUusc6lKFnTzs6YIzR88YfYVnZsl-wQRBXw"><span class="font-headline-sm text-headline-sm text-white tracking-tight font-bold">Nodibranch</span><span class="bg-[#c6eabe] text-[#1d5f62] px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold">v1.0.0</span></a><nav class="hidden xl:flex items-center gap-space-md pl-space-sm"><a class="font-body-sm text-body-sm text-white/80 hover:text-white transition-colors" data-path="home" href="#">Home</a><a class="font-body-sm text-body-sm text-white/80 hover:text-white transition-colors" data-path="documentation" href="#">Documentation</a><a aria-current="page" class="transition-colors text-[#c6eabe] font-headline-sm font-semibold" data-path="interactive-playground" href="#">Interactive Playground</a><a class="font-body-sm text-body-sm text-white/80 hover:text-white transition-colors" data-path="showcase" href="#">Showcase</a></nav></div><div class="flex-1 max-w-md mx-space-sm hidden md:block"><div class="relative flex items-center w-full bg-white/10 rounded-lg px-space-md py-1.5 border border-white/20 focus-within:border-[#c6eabe] transition-all"><span class="material-symbols-outlined text-white/70 text-[18px] mr-space-sm">search</span><span class="font-body-sm text-body-sm text-white/70 flex-1 select-none">Search documentation...</span><kbd class="flex items-center gap-0.5 bg-white/10 px-1.5 py-0.5 rounded text-white/70 border border-white/20 font-label-sm text-label-sm shadow-sm"><span class="text-[10px]">⌘</span>K</kbd></div></div><div class="flex items-center gap-space-sm"><button aria-label="Toggle color scheme" class="p-1.5 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><a class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded bg-[#c6eabe] text-[#1d5f62] font-semibold text-body-sm hover:bg-[#8aba82] hover:text-[#191f34] transition-colors shadow-sm" data-path="documentation" href="#">Get Started</a></div></div></header><main class="w-full pt-16 bg-white min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full bg-white border-b border-gray-200 px-margin py-space-md"><div class="max-w-[1600px] mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-space-md"><div class="flex flex-col gap-1"><div class="flex items-center gap-space-sm"><div class="w-2.5 h-2.5 rounded-full bg-[#1d5f62] animate-pulse"></div></div><h1 class="font-headline-lg text-headline-lg text-[#191f34] font-bold tracking-tight">Interactive CLI Playground</h1></div><div class="flex flex-wrap items-center gap-2"><span class="font-label-sm text-label-sm text-gray-500 uppercase font-semibold mr-1">Quick Runners:</span><button class="preset-btn px-3 py-1.5 rounded bg-gray-50 hover:bg-[#c6eabe]/40 border border-gray-200 text-[#1d5f62] font-label-sm text-label-sm flex items-center gap-1.5 shadow-sm transition-all active:scale-95" onclick="runCommand('nodibranch make:controller User')"><span class="material-symbols-outlined text-[15px] text-[#1d5f62]">play_arrow</span><span class="">make:controller User</span></button><button class="preset-btn px-3 py-1.5 rounded bg-gray-50 hover:bg-[#c6eabe]/40 border border-gray-200 text-[#1d5f62] font-label-sm text-label-sm flex items-center gap-1.5 shadow-sm transition-all active:scale-95" onclick="runCommand('nodibranch routes:list')"><span class="material-symbols-outlined text-[15px] text-[#1d5f62]">alt_route</span><span class="">routes:list</span></button><button class="preset-btn px-3 py-1.5 rounded bg-gray-50 hover:bg-[#c6eabe]/40 border border-gray-200 text-[#1d5f62] font-label-sm text-label-sm flex items-center gap-1.5 shadow-sm transition-all active:scale-95" onclick="runCommand('nodibranch container:debug')"><span class="material-symbols-outlined text-[15px] text-[#1d5f62]">hub</span><span class="">container:debug</span></button><button class="preset-btn px-3 py-1.5 rounded bg-gray-50 hover:bg-[#c6eabe]/40 border border-gray-200 text-[#1d5f62] font-label-sm text-label-sm flex items-center gap-1.5 shadow-sm transition-all active:scale-95" onclick="runCommand('nodibranch serve')"><span class="material-symbols-outlined text-[15px] text-[#1d5f62]">bolt</span><span class="">serve</span></button></div></div></div>
+<div class="w-full px-margin py-space-md">
+<div class="max-w-[1600px] mx-auto grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<div class="xl:col-span-7 flex flex-col bg-[#0f172a] text-surface-container-lowest rounded-xl shadow-xl overflow-hidden min-h-[620px]">
+<div class="bg-[#1e293b] px-space-md py-2.5 flex items-center justify-between select-none">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#ef4444] inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-[#f59e0b] inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-[#10b981] inline-block cursor-pointer"></span>
+<span class="font-label-sm text-label-sm text-surface-dim ml-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+              bash — nodibranch-sandbox
+            </span>
+</div>
+<div class="flex items-center gap-space-sm text-surface-dim">
+<span class="font-label-sm text-label-sm opacity-60">UTF-8</span>
+<button class="hover:text-surface font-label-sm text-label-sm px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition-colors" onclick="clearTerminal()">Clear</button>
+</div>
+</div>
+<div class="p-space-md flex-1 overflow-y-auto font-code-block text-code-block leading-relaxed max-h-[560px]" id="terminal-scroll">
+<pre class="text-primary-fixed select-none font-bold leading-none mb-3 text-[11px] sm:text-[12px]">  _   _           _ _ _                         _     
+ | \ | | ___   __| (_) |__  _ __ __ _ _ __   ___| |__  
+ |  \| |/ _ \ / _` | | '_ \| '__/ _` | '_ \ / __| '_ \ 
+ | |\  | (_) | (_| | | |_) | | | (_| | | | | (__| | | |
+ |_| \_|\___/ \__,_|_|_.__/|_|  \__,_|_| |_|\___|_| |_| v1.0.0
+          </pre>
+<div class="text-surface-dim text-body-sm font-code-block mb-3">
+            Nodibranch Shell v1.0.0 (TS 5.4.2, V8 isolate). Type <span class="text-secondary-fixed font-semibold">help</span> or pick a preset button above.
+          </div>
+<div class="space-y-3" id="terminal-history">
+<div>
+<div class="text-surface-dim">
+<span class="text-secondary-fixed font-bold">nodibranch-cli</span>:<span class="text-primary-fixed font-bold">~/app</span>$ nodibranch --version
+              </div>
+<div class="text-surface-container-high pl-2 mt-1">@nodibranch/core@1.0.0-rc.3 darwin-arm64</div>
+</div>
+</div>
+<div class="mt-3 flex items-center text-surface-lowest">
+<span class="text-secondary-fixed font-bold mr-1.5">nodibranch-cli</span>:<span class="text-primary-fixed font-bold mr-1.5">~/app</span>$&nbsp;
+            <input autocomplete="off" autofocus="" class="bg-transparent border-none outline-none text-surface flex-1 font-code-block text-code-block p-0 m-0 caret-secondary-fixed" id="cli-input" onkeydown="handleInput(event)" placeholder="Type a command (e.g. nodibranch make:controller User)..." spellcheck="false" type="text">
+</div>
+</div>
+<div class="bg-[#0b1120] px-space-md py-1.5 flex items-center justify-between text-surface-dim font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Ready
+          </span>
+<span class="opacity-70">Press <kbd class="px-1 rounded bg-slate-800 text-surface">Enter</kbd> to execute</span>
+</div>
+</div>
+<div class="xl:col-span-5 flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden min-h-[620px]">
+<div class="bg-surface-container-low px-space-md pt-2 flex items-center gap-1 overflow-x-auto select-none">
+<button class="tab-trigger px-3 py-2 rounded-t font-label-md text-label-md flex items-center gap-1.5 bg-surface-container-lowest text-primary-container font-semibold transition-all" id="tab-files" onclick="switchInspector('files')">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+            Files
+          </button>
+<button class="tab-trigger px-3 py-2 rounded-t font-label-md text-label-md flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-all" id="tab-http" onclick="switchInspector('http')">
+<span class="material-symbols-outlined text-[16px]">http</span>
+            HTTP Live
+          </button>
+<button class="tab-trigger px-3 py-2 rounded-t font-label-md text-label-md flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-all" id="tab-di" onclick="switchInspector('di')">
+<span class="material-symbols-outlined text-[16px]">account_tree</span>
+            DI Graph
+          </button>
+<button class="tab-trigger px-3 py-2 rounded-t font-label-md text-label-md flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-all" id="tab-logs" onclick="switchInspector('logs')">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+            Logs
+          </button>
+</div>
+<div class="p-space-md flex-1 flex flex-col bg-surface-container-lowest">
+<div class="inspector-panel flex flex-col h-full" id="panel-files">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Workspace Explorer</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium" id="file-badge">Synced</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm flex-1 min-h-[460px]">
+<div class="md:col-span-5 bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1 font-code-block text-code-inline text-on-surface">
+<div class="flex items-center gap-1.5 text-outline font-bold px-1 py-0.5">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span> nodibranch-app
+                </div>
+<div class="pl-3 flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-medium py-0.5">
+<span class="material-symbols-outlined text-[15px] text-outline">folder</span> src/
+                  </div>
+<div class="pl-4 flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 text-outline py-0.5">
+<span class="material-symbols-outlined text-[15px]">folder</span> controllers/
+                    </div>
+<button class="file-item pl-4 flex items-center justify-between text-left py-1 px-1.5 rounded bg-primary-container text-on-primary font-code-inline text-code-inline shadow-sm" id="btn-file-user-ctl" onclick="loadFile('controller')">
+<span class="flex items-center gap-1 truncate"><span class="material-symbols-outlined text-[14px]">javascript</span> user.controller.ts</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span>
+</button>
+<div class="flex items-center gap-1.5 text-outline py-0.5">
+<span class="material-symbols-outlined text-[15px]">folder</span> services/
+                    </div>
+<button class="file-item pl-4 flex items-center justify-between text-left py-1 px-1.5 rounded hover:bg-surface-container text-on-surface-variant font-code-inline text-code-inline" id="btn-file-user-srv" onclick="loadFile('service')">
+<span class="flex items-center gap-1 truncate"><span class="material-symbols-outlined text-[14px]">javascript</span> user.service.ts</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-medium py-0.5">
+<span class="material-symbols-outlined text-[15px] text-outline">folder</span> tests/
+                  </div>
+<button class="file-item pl-4 flex items-center justify-between text-left py-1 px-1.5 rounded hover:bg-surface-container text-on-surface-variant font-code-inline text-code-inline" id="btn-file-user-test" onclick="loadFile('test')">
+<span class="flex items-center gap-1 truncate"><span class="material-symbols-outlined text-[14px]">science</span> user.test.ts</span>
+</button>
+<div class="flex items-center gap-1.5 text-on-surface-variant py-0.5">
+<span class="material-symbols-outlined text-[14px] text-outline">description</span> nodibranch.config.ts
+                  </div>
+</div>
+</div>
+<div class="md:col-span-7 bg-[#0f172a] rounded-lg p-space-sm flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="flex items-center justify-between pb-2 text-surface-dim font-label-sm text-label-sm">
+<span class="text-primary-fixed" id="editor-filename">src/controllers/user.controller.ts</span>
+<span class="text-outline">TypeScript</span>
+</div>
+<pre class="flex-1 font-code-block text-code-block text-surface-container-high overflow-x-auto p-1 leading-relaxed" id="editor-code"><span class="text-[#a7d99e]">import</span> { Controller, Get, Post, Body, Inject } <span class="text-[#a7d99e]">from</span> <span class="text-[#99d7da]">'@nodibranch/core'</span>;
+<span class="text-[#a7d99e]">import</span> { UserService } <span class="text-[#a7d99e]">from</span> <span class="text-[#99d7da]'../services/user.service'&lt;/span&gt;; @Controller(&lt;span class=" text-[#99d7da]"="">'/api/v1/users'</span>)
+<span class="text-[#a7d99e]">export class</span> <span class="text-[#afedf0]">UserController</span> {
+  <span class="text-[#a7d99e]">constructor</span>(
+    @Inject() <span class="text-[#a7d99e]">private readonly</span> userService: <span class="text-[#afedf0]">UserService</span>
+  ) {}
+
+  @Get(<span class="text-[#99d7da]'/'&lt;/span&gt;) &lt;span class=" text-[#a7d99e]"="">public async</span> <span class="text-[#afedf0]">listUsers</span>() {
+    <span class="text-[#a7d99e]">return</span> <span class="text-[#a7d99e]">await</span> <span class="text-[#a7d99e]">this</span>.userService.findAll();
+  }
+}
+                </pre>
+<div class="pt-2 text-right">
+<span class="font-label-sm text-label-sm text-surface-dim">Read-only live generator output</span>
+</div>
+</div>
+</div>
+</div>
+<div class="inspector-panel hidden flex-col h-full" id="panel-http">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-primary-container font-label-sm text-label-sm font-bold">GET</span>
+<span class="font-code-inline text-code-inline text-on-surface">http://localhost:3000/api/v1/users</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Status: <strong class="text-secondary">200 OK</strong></span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Latency: <strong>1.4ms</strong></span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg mb-space-sm font-code-block text-code-inline text-on-surface-variant flex flex-col gap-1">
+<div class=""><strong class="text-on-surface">Content-Type:</strong> application/json; charset=utf-8</div>
+<div class=""><strong class="text-on-surface">X-Powered-By:</strong> Nodibranch/1.0.0-Kernel</div>
+<div class=""><strong class="text-on-surface">X-Response-Time:</strong> 1.42ms</div>
+</div>
+<div class="bg-[#0f172a] rounded-lg p-space-md flex-1 font-code-block text-code-block text-surface-container-high overflow-auto shadow-inner">
+<pre class="leading-relaxed">{
+  <span class="text-[#99d7da]">"status"</span>: <span class="text-[#afedf0]">"success"</span>,
+  <span class="text-[#99d7da]">"meta"</span>: {
+    <span class="text-[#99d7da]">"total"</span>: 2,
+    <span class="text-[#99d7da]">"framework"</span>: <span class="text-[#afedf0]">"Nodibranch TS"</span>,
+    <span class="text-[#99d7da]">"runtime"</span>: <span class="text-[#afedf0]">"V8 Isolate Container"</span>
+  },
+  <span class="text-[#99d7da]">"data"</span>: [
+    {
+      <span class="text-[#99d7da]">"id"</span>: <span class="text-[#afedf0]">"usr_01HGB91"</span>,
+      <span class="text-[#99d7da]">"name"</span>: <span class="text-[#afedf0]">"Alex Rivera"</span>,
+      <span class="text-[#99d7da]">"email"</span>: <span class="text-[#afedf0]">"alex@example.com"</span>,
+      <span class="text-[#99d7da]">"role"</span>: <span class="text-[#afedf0]">"ARCHITECT"</span>
+    },
+    {
+      <span class="text-[#99d7da]">"id"</span>: <span class="text-[#afedf0]">"usr_01HGB94"</span>,
+      <span class="text-[#99d7da]">"name"</span>: <span class="text-[#afedf0]">"Samira Patel"</span>,
+      <span class="text-[#99d7da]">"email"</span>: <span class="text-[#afedf0]">"samira@example.com"</span>,
+      <span class="text-[#99d7da]">"role"</span>: <span class="text-[#afedf0]">"SYSTEMS_ENGINEER"</span>
+    }
+  ]
+}
+              </pre>
+</div>
+</div>
+<div class="inspector-panel hidden flex-col h-full" id="panel-di">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Compiled Dependency Tree</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">3 Resolved Singletons</span>
+</div>
+<div class="flex-1 bg-surface-container-low rounded-lg p-space-md flex flex-col justify-center items-center gap-space-md">
+<div class="w-full max-w-sm p-space-sm rounded-lg bg-surface-container-lowest shadow-md flex items-center gap-space-sm">
+<div class="p-2 rounded bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[20px]">router</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold">UserController</div>
+<div class="font-label-sm text-label-sm text-outline">Scope: Request · Singleton</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Entry</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary text-[24px]">arrow_downward</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">autowired via constructor</span>
+</div>
+<div class="w-full max-w-sm p-space-sm rounded-lg bg-surface-container-lowest shadow-md flex items-center gap-space-sm">
+<div class="p-2 rounded bg-primary-container text-on-primary">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold">UserService</div>
+<div class="font-label-sm text-label-sm text-outline">Scope: Application · Singleton</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Service</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary text-[24px]">arrow_downward</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">injected database gateway</span>
+</div>
+<div class="w-full max-w-sm p-space-sm rounded-lg bg-surface-container-lowest shadow-md flex items-center gap-space-sm">
+<div class="p-2 rounded bg-secondary text-on-secondary">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold">UserRepository → SQLiteClient</div>
+<div class="font-label-sm text-label-sm text-outline">Pool: Active · In-Memory WASM</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-variant text-on-surface-variant font-label-sm text-label-sm font-semibold">Storage</span>
+</div>
+</div>
+</div>
+<div class="inspector-panel hidden flex-col h-full" id="panel-logs">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Server Event Stream</span>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Listening on port 3000</span>
+</div>
+</div>
+<div class="bg-[#0f172a] rounded-lg p-space-md flex-1 font-code-block text-code-block text-surface-container-high overflow-y-auto space-y-1.5 shadow-inner" id="logs-container">
+<div class="flex items-start gap-2">
+<span class="text-surface-dim font-label-sm text-label-sm">[14:02:11.002]</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">INFO</span>
+<span class="text-surface">Kernel initialization started using Nodibranch Compiler.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-surface-dim font-label-sm text-label-sm">[14:02:11.118]</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-primary-container font-label-sm text-label-sm font-bold">CONTAINER</span>
+<span class="text-surface">Discovered 14 injectable attributes across 4 modules.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-surface-dim font-label-sm text-label-sm">[14:02:11.204]</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">ROUTER</span>
+<span class="text-surface">Mapped GET /api/v1/users → UserController.listUsers</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-surface-dim font-label-sm text-label-sm">[14:02:11.250]</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-primary-container font-label-sm text-label-sm font-bold">READY</span>
+<span class="text-secondary-fixed">HTTP server bound at http://0.0.0.0:3000.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full bg-white border-t border-gray-200 px-margin py-space-md shadow-sm"><div class="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#1d5f62]"></span></div></div><div class="flex items-center gap-space-sm"><button class="px-space-md py-1.5 rounded bg-gray-100 hover:bg-gray-200 text-[#191f34] font-body-sm text-body-sm font-medium transition-colors flex items-center gap-1.5" onclick="clearTerminal()"><span class="material-symbols-outlined text-[16px]">restart_alt</span>Reset Playground</button><button class="px-space-md py-1.5 rounded bg-[#c6eabe]/40 hover:bg-[#c6eabe] text-[#1d5f62] font-body-sm text-body-sm font-semibold transition-colors flex items-center gap-1.5" onclick="triggerAction('ZIP')"><span class="material-symbols-outlined text-[16px]">download</span>Export as ZIP</button></div></div></div>
+</div>
+<script>
+  const fileContents = {
+    controller: {
+      path: 'src/controllers/user.controller.ts',
+      code: `<span class="text-[#a7d99e]">import</span> { Controller, Get, Post, Body, Inject } <span class="text-[#a7d99e]">from</span> <span class="text-[#99d7da]">'@nodibranch/core'</span>;
+<span class="text-[#a7d99e]">import</span> { UserService } <span class="text-[#a7d99e]">from</span> <span class="text-[#99d7da]">'../services/user.service'</span>;
+
+@Controller(<span class="text-[#99d7da]">'/api/v1/users'</span>)
+<span class="text-[#a7d99e]">export class</span> <span class="text-[#afedf0]">UserController</span> {
+  <span class="text-[#a7d99e]">constructor</span>(
+    @Inject() <span class="text-[#a7d99e]">private readonly</span> userService: <span class="text-[#afedf0]">UserService</span>
+  ) {}
+
+  @Get(<span class="text-[#99d7da]'/'</span>)
+  <span class="text-[#a7d99e]">public async</span> <span class="text-[#afedf0]">listUsers</span>() {
+    <span class="text-[#a7d99e]">return</span> <span class="text-[#a7d99e]">await</span> <span class="text-[#a7d99e]">this</span>.userService.findAll();
+  }
+}`
+    },
+    service: {
+      path: 'src/services/user.service.ts',
+      code: `<span class="text-[#a7d99e]">import</span> { Service, Inject } <span class="text-[#a7d99e]">from</span> <span class="text-[#99d7da]">'@nodibranch/core'</span>;
+<span class="text-[#a7d99e]">import</span> { UserRepository } <span class="text-[#a7d99e]">from</span> <span class="text-[#99d7da]">'../repositories/user.repository'</span>;
+
+@Service()
+<span class="text-[#a7d99e]">export class</span> <span class="text-[#afedf0]">UserService</span> {
+  <span class="text-[#a7d99e]">constructor</span>(
+    @Inject() <span class="text-[#a7d99e]">private readonly</span> repo: <span class="text-[#afedf0]">UserRepository</span>
+  ) {}
+
+  <span class="text-[#a7d99e]">public async</span> <span class="text-[#afedf0]">findAll</span>() {
+    <span class="text-[#a7d99e]">return</span> <span class="text-[#a7d99e]">await</span> <span class="text-[#a7d99e]">this</span>.repo.findActiveUsers();
+  }
+}`
+    },
+    test: {
+      path: 'tests/user.test.ts',
+      code: `<span class="text-[#a7d99e]">import</span> { describe, it, expect, createTestingContext } <span class="text-[#a7d99e]">from</span> <span class="text-[#99d7da]">'@nodibranch/testing'</span>;
+<span class="text-[#a7d99e]">import</span> { UserController } <span class="text-[#a7d99e]">from</span> <span class="text-[#99d7da]">'../src/controllers/user.controller'</span>;
+
+describe(<span class="text-[#99d7da]">'UserController'</span>, () => {
+  it(<span class="text-[#99d7da]">'returns registered users list'</span>, <span class="text-[#a7d99e]">async</span> () => {
+    <span class="text-[#a7d99e]">const</span> ctx = <span class="text-[#a7d99e]">await</span> createTestingContext({
+      controllers: [UserController],
+    }).compile();
+
+    <span class="text-[#a7d99e]">const</span> res = <span class="text-[#a7d99e]">await</span> ctx.inject().get(<span class="text-[#99d7da]">'/api/v1/users'</span>);
+    expect(res.statusCode).toBe(200);
+  });
+});`
+    }
+  };
+
+  function switchInspector(tab) {
+    ['files', 'http', 'di', 'logs'].forEach(t => {
+      const panel = document.getElementById('panel-' + t);
+      const btn = document.getElementById('tab-' + t);
+      if (t === tab) {
+        panel.classList.remove('hidden');
+        panel.classList.add('flex');
+        btn.className = 'tab-trigger px-3 py-2 rounded-t font-label-md text-label-md flex items-center gap-1.5 bg-surface-container-lowest text-primary-container font-semibold transition-all';
+      } else {
+        panel.classList.add('hidden');
+        panel.classList.remove('flex');
+        btn.className = 'tab-trigger px-3 py-2 rounded-t font-label-md text-label-md flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-all';
+      }
+    });
+  }
+
+  function loadFile(type) {
+    const data = fileContents[type];
+    document.getElementById('editor-filename').textContent = data.path;
+    document.getElementById('editor-code').innerHTML = data.code;
+    
+    ['user-ctl', 'user-srv', 'user-test'].forEach(id => {
+      const el = document.getElementById('btn-file-' + id);
+      el.className = 'file-item pl-4 flex items-center justify-between text-left py-1 px-1.5 rounded hover:bg-surface-container text-on-surface-variant font-code-inline text-code-inline';
+    });
+
+    const activeId = type === 'controller' ? 'user-ctl' : (type === 'service' ? 'user-srv' : 'user-test');
+    const activeEl = document.getElementById('btn-file-' + activeId);
+    activeEl.className = 'file-item pl-4 flex items-center justify-between text-left py-1 px-1.5 rounded bg-primary-container text-on-primary font-code-inline text-code-inline shadow-sm';
+  }
+
+  function runCommand(cmd) {
+    const input = document.getElementById('cli-input');
+    input.value = cmd;
+    executeCommand(cmd);
+  }
+
+  function handleInput(e) {
+    if (e.key === 'Enter') {
+      const input = document.getElementById('cli-input');
+      const cmd = input.value.trim();
+      if (cmd) {
+        executeCommand(cmd);
+        input.value = '';
+      }
+    }
+  }
+
+  function clearTerminal() {
+    document.getElementById('terminal-history').innerHTML = '';
+    document.getElementById('cli-input').value = '';
+  }
+
+  function executeCommand(cmd) {
+    const history = document.getElementById('terminal-history');
+    const entry = document.createElement('div');
+    entry.className = 'mt-2';
+
+    let outputHtml = '';
+
+    if (cmd.includes('make:controller')) {
+      outputHtml = `
+        <div class="text-surface-dim">
+          <span class="text-secondary-fixed font-bold">nodibranch-cli</span>:<span class="text-primary-fixed font-bold">~/app</span>$ ${cmd}
+        </div>
+        <div class="pl-2 mt-1 space-y-1">
+          <div class="text-secondary-fixed font-semibold">[SUCCESS] Created UserController at src/controllers/user.controller.ts</div>
+          <div class="text-primary-fixed">[UPDATE] Registered UserController in AppKernel module</div>
+          <div class="text-surface-dim">[TEST] Created companion test at tests/user.test.ts</div>
+        </div>
+      `;
+      switchInspector('files');
+      loadFile('controller');
+    } else if (cmd.includes('routes:list')) {
+      outputHtml = `
+        <div class="text-surface-dim">
+          <span class="text-secondary-fixed font-bold">nodibranch-cli</span>:<span class="text-primary-fixed font-bold">~/app</span>$ ${cmd}
+        </div>
+        <div class="pl-2 mt-1 font-code-block text-code-block">
+          <div class="text-secondary-fixed font-bold border-b border-slate-700 pb-1 mb-1">METHOD   ROUTE                      ACTION                          MIDDLEWARE</div>
+          <div><span class="text-primary-fixed font-bold">GET</span>      /api/v1/users              UserController.listUsers        cors, rateLimit(100)</div>
+          <div><span class="text-secondary-fixed font-bold">POST</span>     /api/v1/users              UserController.createUser       auth.guard, validator</div>
+          <div><span class="text-primary-fixed font-bold">GET</span>      /api/v1/users/:id          UserController.getUserById      cache(30s)</div>
+          <div><span class="text-error font-bold">DELETE</span>   /api/v1/users/:id          UserController.deleteUser       auth.guard, role.admin</div>
+        </div>
+      `;
+      switchInspector('http');
+    } else if (cmd.includes('container:debug')) {
+      outputHtml = `
+        <div class="text-surface-dim">
+          <span class="text-secondary-fixed font-bold">nodibranch-cli</span>:<span class="text-primary-fixed font-bold">~/app</span>$ ${cmd}
+        </div>
+        <div class="pl-2 mt-1 font-code-block text-code-block">
+          <div class="text-surface font-bold">Nodibranch Service Container Definitions:</div>
+          <div class="text-primary-fixed mt-1">✔ App\\Controllers\\UserController -> singleton (request-scoped)</div>
+          <div class="text-primary-fixed">✔ App\\Services\\UserService -> autowired (1 dependency: UserRepository)</div>
+          <div class="text-primary-fixed">✔ App\\Repositories\\UserRepository -> autowired (1 dependency: SQLiteClient)</div>
+          <div class="text-secondary-fixed mt-1 font-semibold">Container compiled in 3.4ms with 0 circular loops.</div>
+        </div>
+      `;
+      switchInspector('di');
+    } else if (cmd.includes('serve')) {
+      outputHtml = `
+        <div class="text-surface-dim">
+          <span class="text-secondary-fixed font-bold">nodibranch-cli</span>:<span class="text-primary-fixed font-bold">~/app</span>$ ${cmd}
+        </div>
+        <div class="pl-2 mt-1 font-code-block text-code-block space-y-1">
+          <div class="text-surface-dim">[INFO] Nodibranch v1.0.0 booting up in development mode...</div>
+          <div class="text-surface-container-high">[WATCH] Monitoring files in /src for live hot-reload</div>
+          <div class="text-secondary-fixed font-bold">[SERVER] Running live on http://127.0.0.1:3000</div>
+          <div class="text-primary-fixed">[READY] Ready for incoming HTTP requests</div>
+        </div>
+      `;
+      switchInspector('logs');
+    } else if (cmd.includes('help')) {
+      outputHtml = `
+        <div class="text-surface-dim">
+          <span class="text-secondary-fixed font-bold">nodibranch-cli</span>:<span class="text-primary-fixed font-bold">~/app</span>$ ${cmd}
+        </div>
+        <div class="pl-2 mt-1 space-y-1 text-surface-container-high">
+          <div><strong class="text-secondary-fixed">make:controller &lt;Name&gt;</strong> - Generate controller boilerplate</div>
+          <div><strong class="text-secondary-fixed">routes:list</strong> - Display registered HTTP routes</div>
+          <div><strong class="text-secondary-fixed">container:debug</strong> - Show dependency graph compilation</div>
+          <div><strong class="text-secondary-fixed">serve</strong> - Spin up local development server</div>
+          <div><strong class="text-secondary-fixed">clear</strong> - Reset terminal window</div>
+        </div>
+      `;
+    } else {
+      outputHtml = `
+        <div class="text-surface-dim">
+          <span class="text-secondary-fixed font-bold">nodibranch-cli</span>:<span class="text-primary-fixed font-bold">~/app</span>$ ${cmd}
+        </div>
+        <div class="pl-2 mt-1 text-error">Command not recognized: "${cmd}". Type "help" to view options.</div>
+      `;
+    }
+
+    entry.innerHTML = outputHtml;
+    history.appendChild(entry);
+
+    const terminal = document.getElementById('terminal-scroll');
+    terminal.scrollTop = terminal.scrollHeight;
+  }
+
+  function triggerAction(action) {
+    alert(action + ' export initialized successfully. Virtual workspace compiled.');
+  }
+</script></main><footer class="w-full bg-white border-t border-gray-200 mt-auto text-[#191f34]"><div class="max-w-7xl mx-auto px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-5 gap-space-xl mb-space-xl"><div class="md:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Nodibranch Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VIQtwKyN6ZkvkdUbqVJ74tvxgDspVgbhsL4nn0nDYnTDcS5Alaq6Rzn5yk_1pxdOFyOP9gMlMx9MQhCMMspb9oCcKcyJ3NRWtyaeulovEkl7dC5ICVwJWh9Kp1H2jo3c7G27fGYyLZPSyOOT_MzMnTn5a1_FWgczAMTnmRR1oV0JnmRal6rRMQ3D688A4TC1cJDwZBUwT1WzbSHptGvQX6aIDMxSmSh4tOsI1LeNTSUusc6lKFnTzs6YIzR88YfYVnZsl-wQRBXw"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Nodibranch</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">High-performance, developer-first TypeScript backend framework engineered with Symfony modularity and Nest architecture rigor.</p><div class="font-label-sm text-label-sm text-outline mt-space-xs">Licensed under MIT. Open-source enterprise runtime.</div></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Documentation</span><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" data-path="documentation" href="#">Architecture Guide</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" data-path="documentation" href="#">Dependency Injection</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" data-path="documentation" href="#">Routing &amp; Middleware</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" data-path="documentation" href="#">CLI Toolchain</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Ecosystem</span><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" data-path="ecosystem" href="#">Nodibranch ORM</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" data-path="ecosystem" href="#">Security Bundle</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" data-path="interactive-playground" href="#">Interactive REPL</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" data-path="showcase" href="#">Community Showcase</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Community</span><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" href="https://github.com" rel="noreferrer" target="_blank">GitHub Issues</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" href="https://discord.com" rel="noreferrer" target="_blank">Discord Guild</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" href="#">Release Notes</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" href="#">Contributing</a></nav></div></div><div class="pt-space-lg border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-sm"><p class="font-body-sm text-body-sm text-outline">© 2025 Nodibranch Core Team. Built for modern TypeScript developers.</p><div class="flex items-center gap-space-md"><span class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary"><span class="w-2 h-2 rounded-full bg-secondary"></span>All systems operational</span></div></div></div></footer>
+
+
+
+
+
+</body></html>
