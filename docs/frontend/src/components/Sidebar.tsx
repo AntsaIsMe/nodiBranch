@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import nodibranchLogo from '../../assets/nodibranch.png';
 import { NAV_STRUCTURE } from '../../constant/nav';
 
@@ -22,9 +23,9 @@ export default function Sidebar() {
           {NAV_STRUCTURE.map((item, idx) => (
             <div key={idx}>
               {item.title && (
-                <a href={item.path} className="block py-2 px-3 text-sm font-medium bg-white/10 hover:bg-white/20 rounded-md transition-colors">
+                <Link to={item.path} className="block py-2 px-3 text-sm font-medium bg-white/10 hover:bg-white/20 rounded-md transition-colors">
                   {item.title}
-                </a>
+                </Link>
               )}
 
               {item.group && (
@@ -45,9 +46,9 @@ export default function Sidebar() {
                           <div className="overflow-hidden">
                             <div className="ml-3 mt-1 space-y-1 border-l border-white/10">
                               {chapter.pages.map((page, pIdx) => (
-                                <a key={pIdx} href={page.path} className="block py-1 px-3 text-xs text-white/60 hover:text-white/90 hover:bg-white/5 rounded-r-md transition-colors">
+                                <Link key={pIdx} to={page.path} className="block py-1 px-3 text-xs text-white/60 hover:text-white/90 hover:bg-white/5 rounded-r-md transition-colors">
                                   {page.name}
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </div>

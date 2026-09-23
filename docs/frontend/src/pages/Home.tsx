@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import nodibranchLogo from '../assets/nodibranch.png';
-import CodeBlock from '../components/CodeBlock';
+import CodeBlock from '../components/common/CodeBlock';
 import Button from '../components/common/Button';
 
 const Home = () => {

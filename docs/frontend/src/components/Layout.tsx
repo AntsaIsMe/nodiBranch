@@ -1,6 +1,6 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import TableOfContents from './TableOfContents';
+import Sidebar from './Sidebar/Sidebar';
+import TableOfContents from './TableOfContents/TableOfContents';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
