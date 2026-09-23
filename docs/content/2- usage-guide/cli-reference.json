@@ -1,0 +1,18 @@
+{
+  "id": "cli-reference",
+  "title": "CLI Reference",
+  "filePath": "docs/content/usage-guide/cli-reference.json",
+  "description": "Technical cheat sheet of all commands.",
+  "sections": [
+    {
+      "id": "command-summary",
+      "title": "Command Summary",
+      "content": "A quick reference for all available CLI operations used to scaffold your Express.js project and generate CRUD resources.",
+      "examples": [
+        { "type": "raw", "code": "| Command | Alias | Action |\\n| :--- | :--- | :--- |\\n| nb init | -i | Sets up a new project |\\n| nb | (no args) | Opens interactive menu |\\n| nb -r <name> | -r | Creates Route + Controller |\\n| nb -c <name> | -c | Creates only Controller |\\n| nb -h | -h | Shows this menu |", "explanation": "Comprehensive command table" },
+        { "type": "cli", "code": "nb -h", "explanation": "Display help" },
+        { "type": "cli", "code": "node bin/cli.mjs -h", "explanation": "Display help via node" }
+      ]
+    }
+  ]
+}

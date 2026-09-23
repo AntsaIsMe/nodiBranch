@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'ghost';
@@ -6,7 +5,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
 }
 
-const Button = ({ variant = 'primary', className = '', as: Component = 'button', href, ...props }: ButtonProps) => {
+export default function Button({ variant = 'primary', className = '', as: Component = 'button', href, ...props }: ButtonProps) {
   const variants = {
     primary: 'bg-primary text-white hover:bg-primary/90',
     secondary: 'border border-gray-200 text-gray-600 hover:bg-gray-50',
@@ -20,6 +19,4 @@ const Button = ({ variant = 'primary', className = '', as: Component = 'button',
       {...props}
     />
   );
-};
-
-export default Button;
+}

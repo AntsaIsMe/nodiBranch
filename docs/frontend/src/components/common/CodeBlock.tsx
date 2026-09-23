@@ -6,7 +6,7 @@ interface CodeBlockProps {
   filename?: string;
 }
 
-const CodeBlock = ({ code, language, filename }: CodeBlockProps) => {
+export default function CodeBlock({ code, language, filename }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = async () => {
@@ -39,6 +39,4 @@ const CodeBlock = ({ code, language, filename }: CodeBlockProps) => {
       </div>
     </div>
   );
-};
-
-export default CodeBlock;
+}

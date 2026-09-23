@@ -1,0 +1,18 @@
+{
+  "id": "controller-generation",
+  "title": "Controller Generation",
+  "filePath": "docs/content/usage-guide/controller-generation.json",
+  "description": "Generating the business logic boilerplate.",
+  "sections": [
+    {
+      "id": "creating-the-logic",
+      "title": "Creating the Logic",
+      "content": "Sometimes you just need the boilerplate to get started. Nodibranch generates controllers with standard CRUD method signatures, each wrapped in a try-catch block to ensure your application handles errors gracefully.",
+      "examples": [
+        { "type": "cli", "code": "nb -c User", "explanation": "Generates only the User controller" },
+        { "type": "cli", "code": "node bin/cli.mjs -c User", "explanation": "Direct node execution for controller" },
+        { "type": "raw", "code": "export const create = async (req, res) => {\\n  try {\\n    res.status(201).json({ message: \\"smthng created successfully\\", data: req.body });\\n  } catch (error) {\\n    res.status(500).json({ error: error.message });\\n  }\\n};", "explanation": "Example of the generated create function" }
+      ]
+    }
+  ]
+}

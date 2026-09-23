@@ -1,0 +1,34 @@
+{
+  "id": "project-init",
+  "title": "Project Initialization",
+  "filePath": "docs/content/usage-guide/project-init.json",
+  "description": "How to bootstrap a professional Express.js project.",
+  "sections": [
+    {
+      "id": "building-your-foundation",
+      "title": "Building Your Foundation",
+      "content": "Before you can add features, you need a house for them to live in. The `init` command sets up a complete, professional Express.js project structure instantly, eliminating the need to manually create multiple folders and configuration files.",
+      "examples": [
+        { "type": "cli", "code": "nb init", "explanation": "Standard initialization" },
+        { "type": "cli", "code": "nb -i", "explanation": "Shorthand initialization" },
+        { "type": "cli", "code": "node bin/cli.mjs init", "explanation": "Direct node execution" }
+      ]
+    },
+    {
+      "id": "the-guided-setup",
+      "title": "The Guided Setup",
+      "content": "Nodibranch simplifies the initial project configuration through an interactive CLI wizard. You are prompted for: Server Port (default: 3000), Database Name (default: tempName), Customizations: DB host/port/user/pass, File Uploads (Multer), or a Quick Start Route.",
+      "examples": [
+        { "type": "raw", "code": "? Port du serveur Express: 3000\\n? Nom de la base de données: tempName\\n? Choisissez ce que vous allez personnaliser:\\n  [ ] Personnaliser le DB host...\\n  [x] Integrer l'upload fichier (Multer)\\n  [ ] Generer une template de route avec crud", "explanation": "The interactive prompt sequence" }
+      ]
+    },
+    {
+      "id": "under-the-hood",
+      "title": "Under the Hood",
+      "content": "Nodibranch intelligently bootstraps your project using a blueprint system. It performs a smart merge of package.json files to preserve existing dependencies, generates environment secrets in a .env file, and concludes with an automated dependency installation.",
+      "examples": [
+        { "type": "raw", "code": "Summoning dependencies... \\nSummoning |██████████████████████████████| 100% |\\nEverything installed perfectly!", "explanation": "Installation output" }
+      ]
+    }
+  ]
+}

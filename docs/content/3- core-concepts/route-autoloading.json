@@ -1,0 +1,25 @@
+{
+  "id": "route-autoloading",
+  "title": "Route Autoloading",
+  "filePath": "docs/content/core-concepts/route-autoloading.json",
+  "description": "The \"Smart Scanner\" that removes manual imports.",
+  "sections": [
+    {
+      "id": "the-smart-scanner",
+      "title": "The Smart Scanner",
+      "content": "In a standard Express app, you must manually import every route file into index.js. Nodibranch uses Autoloading: a \"Smart Scanner\" that monitors the src/routes/ directory for any file ending in 'Routes.js' and dynamically mounts it to a corresponding /api/ endpoint.",
+      "examples": [
+        {
+          "type": "raw",
+          "code": "src/routes/UserRoutes.js -> /api/user",
+          "explanation": "Mapping between filename and endpoint"
+        },
+        {
+          "type": "raw",
+          "code": "GET /api/user\\nGET /api/user/123\\nPOST /api/user",
+          "explanation": "Examples of autoloaded endpoints"
+        }
+      ]
+    }
+  ]
+}

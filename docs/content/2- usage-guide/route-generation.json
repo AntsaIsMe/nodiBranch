@@ -1,0 +1,26 @@
+{
+  "id": "route-generation",
+  "title": "Route Generation",
+  "filePath": "docs/content/usage-guide/route-generation.json",
+  "description": "Creating the \"Street Sign\" (Route) and \"Brain\" (Controller).",
+  "sections": [
+    {
+      "id": "creating-a-path",
+      "title": "Creating a Path",
+      "content": "In a web application, a Route acts as a street sign, directing incoming HTTP requests to the correct destination. The Controller serves as the brain, containing the business logic to process the request and return a response.",
+      "examples": [
+        { "type": "cli", "code": "nb -r User", "explanation": "Creates a User route and controller" },
+        { "type": "cli", "code": "node bin/cli.mjs -r User", "explanation": "Direct node execution for User resource" },
+        { "type": "raw", "code": "src/routes/userRoutes.js\\nsrc/controllers/userController.js", "explanation": "Generated file paths" }
+      ]
+    },
+    {
+      "id": "the-code-in-action",
+      "title": "The Code in Action",
+      "content": "The route file maps simple web requests (GET, POST, PUT, DELETE) to specific functions in the controller.",
+      "examples": [
+        { "type": "raw", "code": "import { Router } from 'express';\\nimport * as userController from '../controllers/userController.js';\\n\\nconst router = Router();\\n\\nrouter.get('/', userController.getAll);\\nrouter.get('/:id', userController.getOne);\\nrouter.post('/', userController.create);\\nrouter.put('/:id', userController.update);\\nrouter.delete('/:id', userController.remove);\\n\\nexport default router;", "explanation": "Standard generated route file" }
+      ]
+    }
+  ]
+}

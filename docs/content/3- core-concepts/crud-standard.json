@@ -1,0 +1,20 @@
+{
+  "id": "crud-standard",
+  "title": "The CRUD Standard",
+  "filePath": "docs/content/core-concepts/crud-standard.json",
+  "description": "Predictable naming conventions for consistency.",
+  "sections": [
+    {
+      "id": "predictable-patterns",
+      "title": "Predictable Patterns",
+      "content": "CRUD (Create, Read, Update, and Delete) is the standard for data operations. By enforcing this pattern, any developer can understand a controller regardless of the resource it handles.",
+      "examples": [
+        {
+          "type": "raw",
+          "code": "| Action | Internal Key | Controller Method | HTTP Method |\\n| :--- | :--- | :--- | :--- |\\n| Read All | readAll | getAll | GET |\\n| Read One | readOne | getOne | GET |\\n| Create | create | create | POST |\\n| Update | update | update | PUT |\\n| Delete | delete | remove | DELETE |",
+          "explanation": "The CRUD translation map"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "method-filtering",
+  "title": "Method Filtering",
+  "filePath": "docs/content/usage-guide/method-filtering.json",
+  "description": "Customizing the generated CRUD set.",
+  "sections": [
+    {
+      "id": "customizing-your-logic",
+      "title": "Customizing Your Logic",
+      "content": "You may not need a full suite of CRUD operations for every resource. You can precisely control which controller methods are generated using the --only and --except flags.",
+      "examples": [
+        { "type": "cli", "code": "nb -r User --only:create,readAll", "explanation": "Only generates create and getAll" },
+        { "type": "cli", "code": "node bin/cli.mjs -r User --only:create,readAll", "explanation": "Same via node" },
+        { "type": "cli", "code": "nb -r User --except:delete", "explanation": "Generates everything except remove" },
+        { "type": "cli", "code": "node bin/cli.mjs -r User --except:delete", "explanation": "Same via node" }
+      ]
+    }
+  ]
+}

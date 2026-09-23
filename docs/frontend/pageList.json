@@ -1,0 +1,102 @@
+[
+  {
+    "chapter": "Introduction",
+    "pages": [
+      {
+        "id": "presentation",
+        "title": "What is Nodibranch?",
+        "description": "Overview of the framework, its philosophy of eliminating repetition, and the core value proposition for Express.js developers."
+      },
+      {
+        "id": "installation",
+        "title": "Installation",
+        "description": "Step-by-step guide to installing the CLI globally or locally using npm/npx."
+      },
+      {
+        "id": "quick-start",
+        "title": "Quick Start",
+        "description": "The fastest path from zero to a running Express project using the `nb init` command."
+      }
+    ]
+  },
+  {
+    "chapter": "Usage Guide",
+    "pages": [
+      {
+        "id": "interactive-mode",
+        "title": "Interactive Mode",
+        "description": "Exploring the guided menu system for a visual and description-rich configuration experience."
+      },
+      {
+        "id": "project-init",
+        "title": "Project Initialization",
+        "description": "Deep dive into `nb init`: template copying, .env generation, and automatic dependency installation."
+      },
+      {
+        "id": "route-generation",
+        "title": "Generating Routes & Controllers",
+        "description": "Mastering the `-r` flag to create paired files and the logic behind the generated Express routers."
+      },
+      {
+        "id": "controller-generation",
+        "title": "Standalone Controllers",
+        "description": "Using the `-c` flag to generate CRUD controllers without accompanying route files."
+      },
+      {
+        "id": "method-filtering",
+        "title": "Granular Method Filtering",
+        "description": "Detailed guide on using `--only` and `--except` to customize the CRUD functions generated in controllers."
+      },
+      {
+        "id": "cli-reference",
+        "title": "CLI Command Reference",
+        "description": "A comprehensive cheat sheet of all flags, shorthands, and help commands."
+      }
+    ]
+  },
+  {
+    "chapter": "Core Concepts",
+    "pages": [
+      {
+        "id": "route-autoloading",
+        "title": "Automatic Route Registration",
+        "description": "How the framework discovers files in `src/routes/` and mounts them automatically on `/api/<name>`."
+      },
+      {
+        "id": "crud-standard",
+        "title": "The CRUD Standard",
+        "description": "Explanation of the default method names (create, readOne, readAll, update, remove) and their mapping to HTTP verbs."
+      },
+      {
+        "id": "project-structure",
+        "title": "Generated Architecture",
+        "description": "Understanding the folder hierarchy created by Nodibranch and where to place your business logic."
+      }
+    ]
+  },
+  {
+    "chapter": "Developer & Contributor",
+    "pages": [
+      {
+        "id": "internal-architecture",
+        "title": "How it Works",
+        "description": "Technical breakdown of the CLI entry point, command dispatcher, and the template engine."
+      },
+      {
+        "id": "model-templates",
+        "title": "Customizing Models",
+        "description": "How to modify the base CRUD templates in `src/models/` to change the generated code style."
+      },
+      {
+        "id": "extending-cli",
+        "title": "Adding New Commands",
+        "description": "Guide to adding new functionality to the CLI by implementing new command modules in `src/commands/`."
+      },
+      {
+        "id": "contributing",
+        "title": "Contribution Guidelines",
+        "description": "How to report bugs, suggest features, and submit pull requests to the project."
+      }
+    ]
+  }
+]

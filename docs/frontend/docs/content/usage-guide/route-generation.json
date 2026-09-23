@@ -1,0 +1,37 @@
+{
+  "id": "route-generation",
+  "title": "Generating Routes & Controllers",
+  "filePath": "docs/content/usage-guide/route-generation.mdx",
+  "description": "Detailed guide on route and controller generation",
+  "sections": [
+    {
+      "id": "the-r-flag",
+      "title": "The -r flag",
+      "content": "The -r (makeRoute) command generates both a route definition file and its corresponding controller. It automatically maps standard REST endpoints to controller methods, creating a complete communication layer for your resource in one step. See the [CLI Mapping Table](../tables/cli-mapping.md) for a full list of flags.",
+      "examples": [
+        { "type": "cli", "code": "nb -r user", "explanation": "Generate a full route and controller for the 'user' resource." },
+        { "type": "raw", "code": "node bin/cli.mjs -r user", "explanation": "Generate a full route and controller for the 'user' resource." }
+      ]
+    },
+    {
+      "id": "the-c-flag",
+      "title": "The -c flag",
+      "content": "The -c (makeCtrl) command is used when you only need to generate the controller logic without the route file. This is useful for adding logic to existing routes or creating specialized controllers that don't follow the standard REST pattern. See the [CLI Mapping Table](../tables/cli-mapping.md) for a full list of flags.",
+      "examples": [
+        { "type": "cli", "code": "nb -c user", "explanation": "Generate only the controller for the 'user' resource." },
+        { "type": "raw", "code": "node bin/cli.mjs -c user", "explanation": "Generate only the controller for the 'user' resource." }
+      ]
+    },
+    {
+      "id": "method-filtering",
+      "title": "Filtering CRUD Methods",
+      "content": "Both -r and -c commands support method filtering via --only and --except flags. You can specify a comma-separated list of CRUD methods (create, readOne, readAll, update, delete) to include or exclude from the generated controller. See the [CRUD Method Mapping](../tables/cli-mapping.md) for details on each method.",
+      "examples": [
+        { "type": "cli", "code": "nb -r user --only:create,readAll", "explanation": "Generate route and controller with only create and readAll methods." },
+        { "type": "raw", "code": "node bin/cli.mjs -r user --only:create,readAll", "explanation": "Generate route and controller with only create and readAll methods." },
+        { "type": "cli", "code": "nb -c user --except:delete", "explanation": "Generate controller excluding the delete method." },
+        { "type": "raw", "code": "node bin/cli.mjs -c user --except:delete", "explanation": "Generate controller excluding the delete method." }
+      ]
+    }
+  ]
+}

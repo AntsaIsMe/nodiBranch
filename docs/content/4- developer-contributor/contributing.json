@@ -1,0 +1,14 @@
+{
+  "id": "contributing",
+  "title": "Contributing",
+  "filePath": "docs/content/developer-contributor/contributing.json",
+  "description": "Guidelines for the community.",
+  "sections": [
+    {
+      "id": "submitting-changes",
+      "title": "Submitting Changes",
+      "content": "We welcome contributions. Please report bugs with a \"Steps to Reproduce\" section and submit feature pull requests against the `main` branch using ES modules and following the existing project patterns.",
+      "examples": []
+    }
+  ]
+}

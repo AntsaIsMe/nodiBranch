@@ -1,0 +1,23 @@
+{
+  "id": "interactive-mode",
+  "title": "Interactive Mode",
+  "filePath": "docs/content/usage-guide/interactive-mode.mdx",
+  "description": "Using the interactive CLI menu",
+  "sections": [
+    {
+      "id": "launching-home",
+      "title": "Launching the Main Menu",
+      "content": "Nodibranch provides an interactive home menu that simplifies project management and scaffolding. When the CLI is executed without any specific command arguments, it defaults to the home interface, allowing users to select actions via a prompt-driven menu.",
+      "examples": [
+        { "type": "cli", "code": "nb", "explanation": "Launch the interactive home menu." },
+        { "type": "raw", "code": "node bin/cli.mjs", "explanation": "Launch the interactive home menu using the absolute path." }
+      ]
+    },
+    {
+      "id": "menu-options",
+      "title": "Navigating Options",
+      "content": "The interactive menu uses a selection-based system to trigger other CLI commands like project initialization or route generation. This mode is ideal for developers who prefer a guided experience over memorizing specific command-line flags.",
+      "examples": []
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "extending-cli",
+  "title": "Extending the CLI",
+  "filePath": "docs/content/developer-contributor/extending-cli.json",
+  "description": "Guide to adding new functionality.",
+  "sections": [
+    {
+      "id": "adding-a-new-command",
+      "title": "Adding a New Command",
+      "content": "Adding commands is simple: create a module in `src/commands/` with an async function, register it in the switch statement of `bin/cli.mjs`, and update the descriptions in `src/commands/help.js`.",
+      "examples": [
+        {
+          "type": "raw",
+          "code": "Step 1: Create src/commands/makeMiddleware.js\\nStep 2: Register in bin/cli.mjs\\nStep 3: Add to src/commands/help.js",
+          "explanation": "Workflow for adding a new CLI command"
+        }
+      ]
+    }
+  ]
+}

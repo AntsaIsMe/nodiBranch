@@ -1,0 +1,31 @@
+{
+  "id": "quick-start",
+  "title": "Quick Start",
+  "filePath": "docs/content/introduction/quick-start.json",
+  "description": "The fastest path to a running API.",
+  "sections": [
+    {
+      "id": "your-first-api",
+      "title": "Your First API",
+      "content": "The `init` command bootstraps your entire environment. It doesn't just create folders; it handles the configuration, environment setup, and dependency installation in one shot.",
+      "examples": [
+        {
+          "type": "cli",
+          "code": "nb init",
+          "explanation": "Initializes the project using the global alias"
+        },
+        {
+          "type": "cli",
+          "code": "node bin/cli.mjs init",
+          "explanation": "Initializes the project via the direct entry point"
+        }
+      ]
+    },
+    {
+      "id": "the-process",
+      "title": "The Process",
+      "content": "The initialization follows a four-step flow: 1. Launch `nb init`. 2. Configure prompts (Port, DB Name, Customizations). 3. Automated setup (Templates copied, .env created, `npm install` executed). 4. Launch server via `npm start`.",
+      "examples": []
+    }
+  ]
+}
