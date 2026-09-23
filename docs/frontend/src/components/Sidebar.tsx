@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import nodibranchLogo from '../../assets/nodibranch.png';
-import { NAV_STRUCTURE } from '../../constant/nav';
+import nodibranchLogo from '../assets/nodibranch.png';
+import { NAV_STRUCTURE } from '../constant/nav';
 
 export default function Sidebar() {
   const [openChapters, setOpenChapters] = useState<Record<string, boolean>>({});
